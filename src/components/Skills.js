@@ -18,16 +18,7 @@ const Skills = () => {
     {
       title: "Ngoại ngữ",
       description: "Đọc tài liệu và viết báo cáo bằng tiếng Anh",
-      icon: (
-        <img
-          src={"/dieuanhcv/assets/images/icons/uk.png"}
-          style={{
-            width: "64px",
-            height: "64px",
-          }}
-          alt="hero icon"
-        />
-      ),
+      icon: "🌍",
     },
     {
       title: "Viết bài khoa học",
