@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dieuanhcv/static/css/main.3627bcb5.css",
+    "main.js": "/dieuanhcv/static/js/main.a7e2ea81.js",
+    "index.html": "/dieuanhcv/index.html",
+    "main.3627bcb5.css.map": "/dieuanhcv/static/css/main.3627bcb5.css.map",
+    "main.a7e2ea81.js.map": "/dieuanhcv/static/js/main.a7e2ea81.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3627bcb5.css",
+    "static/js/main.a7e2ea81.js"
+  ]
+}
