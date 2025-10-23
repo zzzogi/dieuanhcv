@@ -1,0 +1,143 @@
+.experience {
+  padding: 100px 0;
+  background-color: var(--light-bg);
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.experience-timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-blue),
+    var(--primary-green)
+  );
+}
+
+.timeline-item {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-step {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue),
+    var(--primary-green)
+  );
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-step {
+  transform: scale(1.1);
+}
+
+.timeline-content {
+  flex: 1;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-position {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.timeline-org {
+  font-size: 1.1rem;
+  color: var(--primary-green);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.timeline-period {
+  font-size: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.timeline-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 60px 0;
+  }
+
+  .experience-container {
+    padding: 0 20px;
+  }
+
+  .experience-timeline::before {
+    left: 40px;
+  }
+
+  .timeline-item {
+    gap: 20px;
+  }
+
+  .timeline-step {
+    width: 80px;
+    height: 80px;
+    font-size: 1.8rem;
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+
+  .timeline-position {
+    font-size: 1.2rem;
+  }
+
+  .timeline-org {
+    font-size: 1rem;
+  }
+}

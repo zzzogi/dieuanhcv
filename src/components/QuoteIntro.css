@@ -1,0 +1,70 @@
+.quote-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--primary-green) 0%,
+    var(--primary-blue) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 1s ease-in;
+}
+
+.quote-intro.fade-out {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+.quote-content {
+  text-align: center;
+  color: var(--white);
+  max-width: 800px;
+  padding: 40px;
+}
+
+.quote-text {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 1.5rem;
+  }
+
+  .quote-author {
+    font-size: 1rem;
+  }
+}
