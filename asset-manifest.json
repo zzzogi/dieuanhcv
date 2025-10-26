@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dieuanhcv/static/css/main.3627bcb5.css",
-    "main.js": "/dieuanhcv/static/js/main.f72bf91f.js",
+    "main.css": "/dieuanhcv/static/css/main.d9540684.css",
+    "main.js": "/dieuanhcv/static/js/main.e9630bd7.js",
     "index.html": "/dieuanhcv/index.html",
-    "main.3627bcb5.css.map": "/dieuanhcv/static/css/main.3627bcb5.css.map",
-    "main.f72bf91f.js.map": "/dieuanhcv/static/js/main.f72bf91f.js.map"
+    "main.d9540684.css.map": "/dieuanhcv/static/css/main.d9540684.css.map",
+    "main.e9630bd7.js.map": "/dieuanhcv/static/js/main.e9630bd7.js.map"
   },
   "entrypoints": [
-    "static/css/main.3627bcb5.css",
-    "static/js/main.f72bf91f.js"
+    "static/css/main.d9540684.css",
+    "static/js/main.e9630bd7.js"
   ]
 }
