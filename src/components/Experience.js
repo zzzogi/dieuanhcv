@@ -5,35 +5,35 @@ const Experience = () => {
   const experienceData = [
     {
       step: "01",
-      position: "Nghiên cứu viên chính",
-      organization: "Viện Nghiên cứu Khoa học và Công nghệ",
-      period: "2022 - Hiện tại",
+      position: "Bí thư Đoàn trường",
+      organization: "THPT Lê Quý Đôn - Đống Đa",
+      period: "2019 - 2022",
       description:
-        "Dẫn dắt các dự án nghiên cứu về Machine Learning và Data Science, quản lý đội ngũ 5 người, công bố 6 bài báo quốc tế.",
+        "Lãnh đạo và tổ chức các hoạt động Đoàn, quản lý đội ngũ hơn 20 thành viên.",
     },
     {
       step: "02",
-      position: "Nghiên cứu viên",
-      organization: "Trung tâm Đổi mới Sáng tạo",
-      period: "2020 - 2022",
+      position: "Sinh viên",
+      organization: "Đại học Kinh tế Quốc dân",
+      period: "2022 - Hiện tại",
       description:
-        "Thực hiện nghiên cứu độc lập và hợp tác, tham gia 8 dự án, phát triển thuật toán phân tích dữ liệu y tế.",
+        "Sinh viên chuyên ngành Kinh tế quốc tế, tích cực tham gia các hoạt động nghiên cứu khoa học và câu lạc bộ sinh viên.",
     },
     {
       step: "03",
-      position: "Trợ lý Nghiên cứu",
-      organization: "Đại học Quốc gia - Khoa Khoa học",
-      period: "2018 - 2020",
+      position: "Trợ giảng",
+      organization: "Trung tâm IELTS - ODIN Education",
+      period: "2022 - Hiện tại",
       description:
-        "Hỗ trợ các dự án nghiên cứu, thu thập và xử lý dữ liệu, viết báo cáo khoa học và trình bày tại hội thảo.",
+        "Hỗ trợ giảng dạy và hướng dẫn học viên trong các khóa học IELTS, giúp cải thiện kỹ năng ngôn ngữ và chiến lược làm bài.",
     },
     {
       step: "04",
-      position: "Thực tập sinh Nghiên cứu",
-      organization: "Phòng thí nghiệm Sinh học Tính toán",
-      period: "2017 - 2018",
+      position: "Nghiên cứu sinh",
+      organization: "Đại học Kinh tế Quốc dân",
+      period: "2022 - Hiện tại",
       description:
-        "Tham gia dự án nghiên cứu về genomics, học phương pháp phân tích dữ liệu và kỹ thuật thí nghiệm.",
+        "Tham gia 10+ dự án nghiên cứu, học phương pháp phân tích dữ liệu và thống kê.",
     },
   ];
 

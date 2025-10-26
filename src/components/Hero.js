@@ -1,7 +1,5 @@
-import React from "react";
 import "./Hero.css";
-// If using src/dieuanhcv/assets folder, uncomment this:
-// import profileImage from '../dieuanhcv/assets/profile.png';
+import OptimizedImage from "./OptimizedImage";
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -48,10 +46,11 @@ const Hero = () => {
             <div className="circle-bg circle-3"></div>
 
             {/* Your PNG image */}
-            <img
+            <OptimizedImage
               src="/dieuanhcv/assets/images/hero/profile.png"
               alt="Dieuanh Profile"
               className="profile-image"
+              loading="lazy"
             />
             {/* If using src/dieuanhcv/assets, use this instead:
             <img 

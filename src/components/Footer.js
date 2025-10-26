@@ -204,11 +204,6 @@ const Footer = () => {
           <p>
             &copy; {new Date().getFullYear()} Dieuanh.cv. All rights reserved.
           </p>
-          <div className="footer-bottom-links">
-            <a href="#privacy">Privacy Policy</a>
-            <span>•</span>
-            <a href="#terms">Terms of Service</a>
-          </div>
         </div>
       </div>
     </footer>

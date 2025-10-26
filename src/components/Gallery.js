@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Gallery.css";
+import OptimizedImage from "./OptimizedImage";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -9,21 +10,21 @@ const Gallery = () => {
     {
       id: 1,
       src: "/dieuanhcv/assets/images/gallery/gallery-1.jpg",
-      title: "Giải nhất nghiên cứu khoa học cấp trường 2025",
+      title: "Giải Nhất Nghiên cứu khoa học cấp Đại học 2025",
       description:
-        "Giải nhất nghiên cứu khoa học cấp trường 2025 với đề tài “Tác động bất đối xứng của chất lượng thể chế đến du lịch: Nghiên cứu tại các quốc gia thành viên ASEAN”",
+        "Giải Nhất Nghiên cứu khoa học cấp Đại học 2025 với đề tài “Tác động bất đối xứng của chất lượng thể chế đến du lịch: Nghiên cứu tại các quốc gia thành viên ASEAN”",
     },
     {
       id: 2,
       src: "/dieuanhcv/assets/images/gallery/gallery-2.jpg",
-      title: "Giải nhì nghiên cứu khoa học cấp trường 2025",
+      title: "Giải Nhì Nghiên cứu khoa học cấp Đại học 2025",
       description:
-        "Giải nhì nghiên cứu khoa học cấp trường 2025 với đề tài “Ảnh hưởng của hội chứng FOMO đến ý định đầu tư vàng tại Việt Nam”",
+        "Giải Nhì Nghiên cứu khoa học cấp Đại học 2025 với đề tài “Ảnh hưởng của hội chứng FOMO đến ý định đầu tư vàng tại Việt Nam”",
     },
     {
       id: 3,
       src: "/dieuanhcv/assets/images/gallery/gallery-3.jpg",
-      title: "Tham gia hội thảo GEIPOVFS",
+      title: "Hội thảo khoa học quốc tế GEIPOVFS",
       description:
         "Tham gia và trình bày bài nghiên cứu tại Hội thảo khoa học quốc tế “Bất ổn kinh tế toàn cầu và đối sách của hệ thống tài chính Việt Nam” (Global Economy Instability and Policies of Vietnam's Financial system) (GEIPOVFS)",
     },
@@ -103,10 +104,11 @@ const Gallery = () => {
               className="gallery-item"
               onClick={() => openLightbox(image)}
             >
-              <img
+              <OptimizedImage
                 src={image.src}
                 alt={image.title}
                 className="gallery-image"
+                loading="lazy"
               />
               <div className="gallery-overlay">
                 <h3 className="gallery-title">{image.title}</h3>
@@ -143,10 +145,11 @@ const Gallery = () => {
               &#8250;
             </button>
 
-            <img
+            <OptimizedImage
               src={selectedImage.src}
               alt={selectedImage.title}
               className="lightbox-image"
+              loading="lazy"
             />
 
             <div className="lightbox-info">
