@@ -23,7 +23,7 @@ const Experience = () => {
       step: "03",
       position: "Trợ giảng",
       organization: "Trung tâm IELTS - ODIN Education",
-      period: "2022 - Hiện tại",
+      period: "2022 - 04/2026",
       description:
         "Hỗ trợ giảng dạy và hướng dẫn học viên trong các khóa học IELTS, giúp cải thiện kỹ năng ngôn ngữ và chiến lược làm bài.",
     },
@@ -34,6 +34,14 @@ const Experience = () => {
       period: "2022 - Hiện tại",
       description:
         "Tham gia 10+ dự án nghiên cứu, học phương pháp phân tích dữ liệu và thống kê.",
+    },
+    {
+      step: "05",
+      position: "Điều tra viên kinh tế",
+      organization: "Tổng cục thống kê TP.Hà Nội",
+      period: "2026",
+      description:
+        "Tham gia thực hiện điều tra, phân tích dữ liệu 100 doanh nghiệp trên địa bàn Cầu Giấy.",
     },
   ];
 

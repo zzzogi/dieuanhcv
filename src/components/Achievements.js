@@ -207,24 +207,24 @@ const Achievements = () => {
     {
       id: 3,
       category: "Sinh viên 5 Tốt",
-      title: "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2024",
+      title: "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2023 - 2024",
       description: "",
       thumbnail: "/dieuanhcv/assets/images/certificates/sv5t/cert-1.jpg",
       certificates: [
         {
           id: 1,
           image: "/dieuanhcv/assets/images/certificates/sv5t/cert-1.jpg",
-          title: "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2024",
+          title: "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2023 - 2024",
           organization: "Ban Chấp hành Hội Sinh viên Đại học Kinh tế Quốc dân",
-          year: "2024",
+          year: "2023 - 2024",
           description: "",
         },
         {
           id: 2,
           image: "/dieuanhcv/assets/images/certificates/sv5t/cert-2.jpg",
-          title: "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2024",
+          title: "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2023 - 2024",
           organization: "Ban Chấp hành Hội Sinh viên Đại học Kinh tế Quốc dân",
-          year: "2024",
+          year: "2023 - 2024",
           description: "",
         },
       ],
@@ -244,6 +244,43 @@ const Achievements = () => {
             'Đạt danh hiệu "Đoàn viên tiêu biểu xuất sắc" cấp Đại học năm học 2024 - 2025',
           organization: "Đoàn TNCS Hồ Chí Minh - Đại học Kinh tế Quốc dân",
           year: "2025",
+          description: "",
+        },
+      ],
+    },
+    {
+      id: 5,
+      category: "Sinh viên 5 tốt cấp Thành phố",
+      title: "Danh hiệu Sinh viên 5 Tốt cấp Thành phố năm 2024-2025",
+      description: "",
+      thumbnail: "/dieuanhcv/assets/images/certificates/sv5t-tp/cert-1.png",
+      certificates: [
+        {
+          id: 1,
+          image: "/dieuanhcv/assets/images/certificates/sv5t-tp/cert-1.png",
+          title:
+            'Đạt danh hiệu "Sinh viên 5 tốt" cấp Thành phố năm học 2024 - 2025',
+          organization: "",
+          year: "2024 - 2025",
+          description: "",
+        },
+      ],
+    },
+    {
+      id: 5,
+      category: "Sinh viên tiêu biểu",
+      title:
+        "Danh hiệu Sinh viên tiêu biểu Đại học Kinh tế Quốc dân năm 2025 - 2026",
+      description: "",
+      thumbnail: "/dieuanhcv/assets/images/certificates/svtb/cert-1.png",
+      certificates: [
+        {
+          id: 1,
+          image: "/dieuanhcv/assets/images/certificates/svtb/cert-1.png",
+          title:
+            'Đạt danh hiệu "Sinh viên tiêu biểu" cấp Đại học năm học 2025 - 2026',
+          organization: "Đại học Kinh tế Quốc dân",
+          year: "2025 - 2026",
           description: "",
         },
       ],

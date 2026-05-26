@@ -30,7 +30,7 @@ function App() {
     const fadeInTimer = setTimeout(() => {
       setShowContent(true);
       document.body.style.overflow = "auto";
-    }, 3500);
+    }, 2000);
 
     return () => {
       clearTimeout(fadeOutTimer);

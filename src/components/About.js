@@ -35,7 +35,7 @@ const About = () => {
         <div className="about-content">
           <h2 className="section-title">Về bản thân</h2>
           <p className="about-text">
-            Tôi là một nhà nghiên cứu khoa học với hơn 2 năm kinh nghiệm trong
+            Tôi là một nhà nghiên cứu khoa học với hơn 3 năm kinh nghiệm trong
             lĩnh vực nghiên cứu và phát triển. Niềm đam mê của tôi là khám phá
             những kiến thức mới và áp dụng phương pháp khoa học để giải quyết
             các vấn đề phức tạp.
