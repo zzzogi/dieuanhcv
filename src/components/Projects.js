@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Projects.css";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [selectedPaper, setSelectedPaper] = useState(null);
   const [showMobileViewer, setShowMobileViewer] = useState(false);
 
@@ -106,6 +108,19 @@ const Projects = () => {
       citations: "?",
       status: "Published",
     },
+    {
+      id: 8,
+      title:
+        "OPPORTUNITIES AND CHALLENGES IN THE DEVELOPMENT OF THE DIGITAL ECONOMY IN VIETNAM",
+      pdfUrl: "/dieuanhcv/assets/pdfs/bai-8.pdf",
+      authors: "Huy Thanh Phan, Hong Van Luong, Dieu Anh Bui",
+      journal:
+        "The 3rd International Conference on Contemporary Issues in Business and Management BUSINESS ADMINISTRATION FOR VIETNAM'S SUSTAINABLE DOUBLE-DIGIT ECONOMIC GROWTH TARGET",
+      year: "2026",
+      description: "",
+      citations: "?",
+      status: "Published",
+    },
   ];
 
   // Set first paper as default
@@ -140,17 +155,17 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="projects-container">
         <div className="projects-header">
-          <h2 className="section-title">Công trình nghiên cứu</h2>
-          <p className="section-subtitle">
-            Các bài báo khoa học đã được công bố trên tạp chí quốc tế
-          </p>
+          <h2 className="section-title">{t("projects.title")}</h2>
+          <p className="section-subtitle">{t("projects.subtitle")}</p>
         </div>
 
         <div className="pdf-reader-layout">
           {/* Left Sidebar - Paper List */}
           <div className="papers-sidebar">
             <div className="sidebar-header">
-              <h3>Sản phẩm công bố ({papers.length})</h3>
+              <h3>
+                {t("projects.publishedWorks")} ({papers.length})
+              </h3>
             </div>
             <div className="papers-list">
               {papers.map((paper) => (
@@ -203,7 +218,7 @@ const Projects = () => {
                       <span className="viewer-year">{selectedPaper.year}</span>
                       <span className="viewer-separator">•</span>
                       <span className="viewer-citations">
-                        {selectedPaper.citations} lượt trích dẫn
+                        {selectedPaper.citations} {t("projects.citations")}
                       </span>
                     </div>
                   </div>
@@ -225,7 +240,7 @@ const Projects = () => {
                       <polyline points="7 10 12 15 17 10" />
                       <line x1="12" y1="15" x2="12" y2="3" />
                     </svg>
-                    Tải file PDF
+                    {t("projects.downloadPdf")}
                   </button>
                 </div>
 

@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Achievements.css";
+import { useTranslation } from "react-i18next";
 
 const Achievements = () => {
+  const { t } = useTranslation();
   const [selectedSet, setSelectedSet] = useState(null);
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState({});
@@ -10,282 +12,155 @@ const Achievements = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
 
-  // Certificate Sets - Each set is a category
-  const certificateSets = [
+  const certificateImages = [
     {
       id: 1,
-      category: "Nghiên cứu khoa học",
-      title: "Thành tích Nghiên cứu Khoa học",
-      description: "Giấy khen và chứng chỉ về thành tích Nghiên cứu khoa học",
       thumbnail: "/dieuanhcv/assets/images/certificates/hoc-tap/cert-1.jpg",
       certificates: [
         {
           id: 1,
           image: "/dieuanhcv/assets/images/certificates/hoc-tap/cert-1.jpg",
-          title: "Giải Nhất Nghiên cứu Khoa học cấp Đại học 2025",
-          organization: "Đại học Kinh tế Quốc dân",
-          year: "2025",
-          description:
-            "Giải Nhất Nghiên cứu khoa học sinh viên cấp Đại học 2025 với đề tài “Tác động bất đối xứng của chất lượng thể chế đến du lịch: Nghiên cứu tại các quốc gia thành viên ASEAN”",
         },
         {
           id: 2,
           image: "/dieuanhcv/assets/images/certificates/hoc-tap/cert-2.jpg",
-          title: "Giải Nhì Nghiên cứu Khoa học cấp Đại học 2025",
-          organization: "Đại học Kinh tế Quốc dân",
-          year: "2025",
-          description:
-            "Giải Nhì Nghiên cứu khoa học sinh viên cấp Đại học 2025 với đề tài “Ảnh hưởng của hội chứng FOMO đến ý định đầu tư vàng tại Việt Nam”",
         },
         {
           id: 3,
           image: "/dieuanhcv/assets/images/certificates/hoc-tap/cert-3.jpg",
-          title:
-            'The certificate of acceptance for the manuscript (ijfs-3794202) titled: "The role of Fear of Missing Out (FOMO), Loss Aversion, and Herd Behavior in Gold Investment Decisions: A Study in the Vietnamese Market"',
-          organization: "International Journal of IMPACT Financial Studies",
-          year: "2025",
-          description:
-            "Bài báo được đăng trên tạp chí quốc tế uy tín - Nhà xuất bản MDPI",
         },
         {
           id: 4,
           image: "/dieuanhcv/assets/images/certificates/hoc-tap/cert-4.jpg",
-          title:
-            "CERTIFICATE OF PRESENTATION: Impacts of FOMO on investment decisions in gold: A Study in the Vietnamese Market",
-          organization: "CIEMB",
-          year: "2025",
-          description:
-            "Chứng chỉ trình bày tại Hội thảo quốc tế về Kinh tế và Quản lý kinh doanh CIEMB 2025",
         },
       ],
     },
     {
       id: 2,
-      category: "Tình Nguyện Xuất Sắc",
-      title: "Có thành tích xuất sắc trong hoạt động tình nguyện 2024-2025",
-      description:
-        "Sau khi thu thập đủ 15+ chứng chỉ tình nguyện trong năm học 2024-2025, tôi đã vinh dự nhận được giấy khen từ Ban Chấp Hành Hội Sinh Viên Đại Học Kinh Tế Quốc Dân",
-      thumbnail: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-1.png", // Best certificate as thumbnail
+      thumbnail: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-1.png",
       certificates: [
         {
           id: 1,
           image: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-1.png",
-          title: "Có thành tích xuất sắc trong hoạt động tình nguyện 2024-2025",
-          organization:
-            "BAN CHẤP HÀNH HỘI SINH VIÊN VIỆT NAM ĐẠI HỌC KINH TẾ QUỐC DÂN",
-          year: "2025",
-          description:
-            "Sau khi thu thập đủ 15+ chứng chỉ tình nguyện trong năm học 2024-2025, tôi đã vinh dự nhận được giấy khen từ Ban Chấp Hành Hội Sinh Viên Đại Học Kinh Tế Quốc Dân",
         },
         {
           id: 2,
           image: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-2.jpg",
-          title:
-            'Tham gia 01 ngày tình nguyện Chiến dịch tình nguyện "Sắc thu"',
-          organization:
-            "Hội sinh viên Việt Nam trường Đại học Kinh tế Quốc dân",
-          year: "2024",
-          description: "",
         },
         {
           id: 3,
           image: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-3.jpg",
-          title: "Tham gia 01 ngày tình nguyện Hiến máu tình nguyện",
-          organization: "BCĐ vận động hiến máu tình nguyện thành phố Hà Nội",
-          year: "2024",
-          description: "",
         },
         {
           id: 4,
           image: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-4.png",
-          title:
-            'Tham gia 01 ngày tình nguyện chương trình "Tình nguyện mùa xuân 2025"',
-          organization:
-            "Đội thanh niên tình nguyện khoa Kinh tế và Kinh doanh quốc tế",
-          year: "2025",
-          description: "",
         },
         {
           id: 5,
           image: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-5.png",
-          title:
-            'Tham gia 01 ngày tình nguyện "Góp mì cho em" tại Thạnh Hoà, Hậu Giang',
-          organization: "Dự án thiện nguyện Lá Xanh",
-          year: "2025",
-          description: "",
         },
         {
           id: 6,
           image: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-6.jpg",
-          title:
-            'Tham gia 01 ngày tình nguyện: Là tình nguyện viên xuất sắc khi tham gia chiến dịch "Clean up Việt Nam lần 7" Hưởng ứng Ngày Môi trường thế giới và Ngày Đại dương thế giới với chủ đề "Đại dương kỳ diệu" được tổ chức bởi Cộng Đồng Xanh Việt Nam.',
-          organization: "Bộ Nông Nghiệp và Môi trường",
-          year: "2025",
-          description: "",
         },
         {
           id: 7,
           image: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-7.jpg",
-          title:
-            'Tham gia 01 ngày tình nguyện "Kết nắng gửi thương 2025: Gửi trọn yêu thương - Xâu kết văn hóaTham gia 01 ngày tình nguyện Chương trình Chiến dịch gây quỹ "30k - Góp nắng yêu thương"',
-          organization: "CLB Sinh viên 5 tốt - Đại học Kinh tế Quốc dân",
-          year: "2025",
-          description: "",
         },
         {
           id: 8,
           image: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-8.png",
-          title:
-            "Tham gia 01 ngày tình nguyện quyên góp sách vở và đồ dùng học tập trong Chiến dịch Hè xanh màu áo Tự hào Quản trị",
-          organization: "Liên chi Đoàn Khoa Quản trị kinh doanh - NEU",
-          year: "2025",
-          description: "",
         },
         {
           id: 9,
           image: "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-9.png",
-          title:
-            'Tham gia 01 ngày tình nguyện trao tặng cờ trong Chương trình "Trao gửi cờ Tổ quốc - Gửi triệu niềm tin về nơi cội nguồn cách mạng"',
-          organization: "Liên chi Đoàn Khoa Quản trị kinh doanh - NEU",
-          year: "2025",
-          description: "",
         },
         {
           id: 10,
           image:
             "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-10.png",
-          title:
-            'Tham gia 01 ngày tình nguyện Vận động nguyên góp đồ dùng học tập trong chiến dịch Thanh niên tình nguyện hè 2025 "Sắc màu linh sơn"',
-          organization:
-            "Ban Chấp Hành Liên Chi Đoàn Khoa Du lịch và Khách sạn - NEU",
-          year: "2025",
-          description: "",
         },
         {
           id: 11,
           image:
             "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-11.png",
-          title:
-            'Tham gia 01 ngày tình nguyện Chương trình "Mùa hè xanh 2025 - Ngàn trái tim xanh, Vạn tia nắng ấm"',
-          organization:
-            "Đội thanh niên tình nguyện khoa Kinh tế và Kinh doanh quốc tế",
-          year: "2025",
-          description: "",
         },
         {
           id: 12,
           image:
             "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-12.png",
-          title:
-            'Tham gia 01 ngày tình nguyện Chương trình tình nguyện hè "Gieo mầm yêu thương"',
-          organization: "Hội sinh viên trường Đại học Thương mại",
-          year: "2025",
-          description: "",
         },
         {
           id: 13,
           image:
             "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-13.png",
-          title:
-            'Tham gia 01 ngày tình nguyện quyên góp Chương trình "Trung thu cho em"',
-          organization: "Dự án thiện nguyện Lá Xanh",
-          year: "2025",
-          description: "",
         },
         {
           id: 14,
           image:
             "/dieuanhcv/assets/images/certificates/tinh-nguyen/cert-14.jpg",
-          title:
-            'Tham gia 01 ngày tình nguyện quyên góp Chương trình "Trung thu đoàn viên"',
-          organization: "Dự án thiện nguyện Lá Xanh",
-          year: "2025",
-          description: "",
         },
       ],
     },
     {
       id: 3,
-      category: "Sinh viên 5 Tốt",
-      title: "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2023 - 2024",
-      description: "",
       thumbnail: "/dieuanhcv/assets/images/certificates/sv5t/cert-1.jpg",
       certificates: [
         {
           id: 1,
           image: "/dieuanhcv/assets/images/certificates/sv5t/cert-1.jpg",
-          title: "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2023 - 2024",
-          organization: "Ban Chấp hành Hội Sinh viên Đại học Kinh tế Quốc dân",
-          year: "2023 - 2024",
-          description: "",
         },
         {
           id: 2,
           image: "/dieuanhcv/assets/images/certificates/sv5t/cert-2.jpg",
-          title: "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2023 - 2024",
-          organization: "Ban Chấp hành Hội Sinh viên Đại học Kinh tế Quốc dân",
-          year: "2023 - 2024",
-          description: "",
         },
       ],
     },
     {
       id: 4,
-      category: "Đoàn viên tiêu biểu xuất sắc",
-      title:
-        'Đạt danh hiệu "Đoàn viên tiêu biểu xuất sắc" cấp Đại học năm học 2024 - 2025',
-      description: "",
       thumbnail: "/dieuanhcv/assets/images/certificates/doan-vien/cert-1.png",
       certificates: [
         {
           id: 1,
           image: "/dieuanhcv/assets/images/certificates/doan-vien/cert-1.png",
-          title:
-            'Đạt danh hiệu "Đoàn viên tiêu biểu xuất sắc" cấp Đại học năm học 2024 - 2025',
-          organization: "Đoàn TNCS Hồ Chí Minh - Đại học Kinh tế Quốc dân",
-          year: "2025",
-          description: "",
         },
       ],
     },
     {
       id: 5,
-      category: "Sinh viên 5 tốt cấp Thành phố",
-      title: "Danh hiệu Sinh viên 5 Tốt cấp Thành phố năm 2024-2025",
-      description: "",
       thumbnail: "/dieuanhcv/assets/images/certificates/sv5t-tp/cert-1.png",
       certificates: [
         {
           id: 1,
           image: "/dieuanhcv/assets/images/certificates/sv5t-tp/cert-1.png",
-          title:
-            'Đạt danh hiệu "Sinh viên 5 tốt" cấp Thành phố năm học 2024 - 2025',
-          organization: "",
-          year: "2024 - 2025",
-          description: "",
         },
       ],
     },
     {
-      id: 5,
-      category: "Sinh viên tiêu biểu",
-      title:
-        "Danh hiệu Sinh viên tiêu biểu Đại học Kinh tế Quốc dân năm 2025 - 2026",
-      description: "",
+      id: 6,
       thumbnail: "/dieuanhcv/assets/images/certificates/svtb/cert-1.png",
       certificates: [
         {
           id: 1,
           image: "/dieuanhcv/assets/images/certificates/svtb/cert-1.png",
-          title:
-            'Đạt danh hiệu "Sinh viên tiêu biểu" cấp Đại học năm học 2025 - 2026',
-          organization: "Đại học Kinh tế Quốc dân",
-          year: "2025 - 2026",
-          description: "",
         },
       ],
     },
   ];
+
+  const certificateSets = t("achievements.sets", { returnObjects: true }).map(
+    (set) => {
+      const imageData = certificateImages.find((img) => img.id === set.id);
+      return {
+        ...set,
+        thumbnail: imageData?.thumbnail ?? "",
+        certificates: set.certificates.map((cert, index) => ({
+          ...cert,
+          image: imageData?.certificates[index]?.image ?? "",
+        })),
+      };
+    },
+  );
 
   const openLightbox = (set) => {
     setSelectedSet(set);
@@ -406,10 +281,8 @@ const Achievements = () => {
     <section id="achievements" className="achievements">
       <div className="achievements-container">
         <div className="achievements-header">
-          <h2 className="section-title">Thành tựu & Chứng chỉ</h2>
-          <p className="section-subtitle">
-            Những cột mốc quan trọng trong hành trình nghiên cứu của tôi
-          </p>
+          <h2 className="section-title">{t("achievements.title")}</h2>
+          <p className="section-subtitle">{t("achievements.subtitle")}</p>
         </div>
 
         <div className="certificate-sets-grid">
@@ -452,7 +325,10 @@ const Achievements = () => {
                       <rect x="3" y="14" width="7" height="7" rx="1" />
                       <rect x="14" y="14" width="7" height="7" rx="1" />
                     </svg>
-                    <span>{set.certificates.length} certificates</span>
+                    <span>
+                      {set.certificates.length}{" "}
+                      {t("achievements.certificatesCount")}
+                    </span>
                   </div>
                 </div>
               </div>

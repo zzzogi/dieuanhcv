@@ -1,58 +1,17 @@
 import React from "react";
 import "./Experience.css";
+import { useTranslation } from "react-i18next";
 
 const Experience = () => {
-  const experienceData = [
-    {
-      step: "01",
-      position: "Bí thư Đoàn trường",
-      organization: "THPT Lê Quý Đôn - Đống Đa",
-      period: "2019 - 2022",
-      description:
-        "Lãnh đạo và tổ chức các hoạt động Đoàn, quản lý đội ngũ hơn 20 thành viên.",
-    },
-    {
-      step: "02",
-      position: "Sinh viên",
-      organization: "Đại học Kinh tế Quốc dân",
-      period: "2022 - Hiện tại",
-      description:
-        "Sinh viên chuyên ngành Kinh tế quốc tế, tích cực tham gia các hoạt động nghiên cứu khoa học và câu lạc bộ sinh viên.",
-    },
-    {
-      step: "03",
-      position: "Trợ giảng",
-      organization: "Trung tâm IELTS - ODIN Education",
-      period: "2022 - 04/2026",
-      description:
-        "Hỗ trợ giảng dạy và hướng dẫn học viên trong các khóa học IELTS, giúp cải thiện kỹ năng ngôn ngữ và chiến lược làm bài.",
-    },
-    {
-      step: "04",
-      position: "Nghiên cứu sinh",
-      organization: "Đại học Kinh tế Quốc dân",
-      period: "2022 - Hiện tại",
-      description:
-        "Tham gia 10+ dự án nghiên cứu, học phương pháp phân tích dữ liệu và thống kê.",
-    },
-    {
-      step: "05",
-      position: "Điều tra viên kinh tế",
-      organization: "Tổng cục thống kê TP.Hà Nội",
-      period: "2026",
-      description:
-        "Tham gia thực hiện điều tra, phân tích dữ liệu 100 doanh nghiệp trên địa bàn Cầu Giấy.",
-    },
-  ];
+  const { t } = useTranslation();
+  const experienceData = t("experience.items", { returnObjects: true });
 
   return (
     <section id="experience" className="experience">
       <div className="experience-container">
         <div className="experience-header">
-          <h2 className="section-title">Kinh nghiệm làm việc</h2>
-          <p className="section-subtitle">
-            Hành trình phát triển nghề nghiệp trong lĩnh vực nghiên cứu khoa học
-          </p>
+          <h2 className="section-title">{t("experience.title")}</h2>
+          <p className="section-subtitle">{t("experience.subtitle")}</p>
         </div>
 
         <div className="experience-timeline">

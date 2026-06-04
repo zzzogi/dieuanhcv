@@ -1,41 +1,38 @@
 import React from "react";
 import "./Skills.css";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+  const { t } = useTranslation();
   const skillsData = [
     {
-      title: "Phương pháp nghiên cứu",
-      description:
-        "Thiết kế nghiên cứu, phân tích định tính và định lượng, đánh giá văn bản khoa học",
+      title: `${t("skills.research.title")}`,
+      description: `${t("skills.research.description")}`,
       icon: "🔬",
     },
     {
-      title: "Phân tích dữ liệu",
-      description:
-        "Statistical analysis, Machine Learning, Data Visualization với Python, R, SPSS",
+      title: `${t("skills.data.title")}`,
+      description: `${t("skills.data.description")}`,
       icon: "📊",
     },
     {
-      title: "Ngoại ngữ",
-      description: "Đọc tài liệu và viết báo cáo bằng tiếng Anh",
+      title: `${t("skills.language.title")}`,
+      description: `${t("skills.language.description")}`,
       icon: "🌍",
     },
     {
-      title: "Viết bài khoa học",
-      description:
-        "Biên soạn bài báo, báo cáo nghiên cứu, và tài liệu học thuật tiếng Anh, Việt",
+      title: `${t("skills.writing.title")}`,
+      description: `${t("skills.writing.description")}`,
       icon: "📝",
     },
     {
-      title: "Quản lý dự án",
-      description:
-        "Lập kế hoạch, điều phối nhóm nghiên cứu, quản lý thời gian và nguồn lực",
+      title: `${t("skills.management.title")}`,
+      description: `${t("skills.management.description")}`,
       icon: "📋",
     },
     {
-      title: "Trình bày & Giao tiếp",
-      description:
-        "Thuyết trình khoa học, hội thảo quốc tế, workshop và đào tạo",
+      title: `${t("skills.communication.title")}`,
+      description: `${t("skills.communication.description")}`,
       icon: "🎤",
     },
   ];
@@ -44,11 +41,8 @@ const Skills = () => {
     <section id="skills" className="skills">
       <div className="skills-container">
         <div className="skills-header">
-          <h2 className="section-title">Sở trường</h2>
-          <p className="section-subtitle">
-            Những kỹ năng và chuyên môn mà tôi đã phát triển qua quá trình
-            nghiên cứu
-          </p>
+          <h2 className="section-title">{t("skills.title")}</h2>
+          <p className="section-subtitle">{t("skills.subtitle")}</p>
         </div>
 
         <div className="skills-grid">

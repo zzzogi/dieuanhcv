@@ -1,52 +1,18 @@
 import React, { useState } from "react";
 import "./Gallery.css";
 import OptimizedImage from "./OptimizedImage";
+import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Update these with your actual image filenames and descriptions
-  const galleryImages = [
-    {
-      id: 1,
-      src: "/dieuanhcv/assets/images/gallery/gallery-1.jpg",
-      title: "Giải Nhất Nghiên cứu khoa học cấp Đại học 2025",
-      description:
-        "Giải Nhất Nghiên cứu khoa học cấp Đại học 2025 với đề tài “Tác động bất đối xứng của chất lượng thể chế đến du lịch: Nghiên cứu tại các quốc gia thành viên ASEAN”",
-    },
-    {
-      id: 2,
-      src: "/dieuanhcv/assets/images/gallery/gallery-2.jpg",
-      title: "Giải Nhì Nghiên cứu khoa học cấp Đại học 2025",
-      description:
-        "Giải Nhì Nghiên cứu khoa học cấp Đại học 2025 với đề tài “Ảnh hưởng của hội chứng FOMO đến ý định đầu tư vàng tại Việt Nam”",
-    },
-    {
-      id: 3,
-      src: "/dieuanhcv/assets/images/gallery/gallery-3.jpg",
-      title: "Hội thảo khoa học quốc tế GEIPOVFS",
-      description:
-        "Tham gia và trình bày bài nghiên cứu tại Hội thảo khoa học quốc tế “Bất ổn kinh tế toàn cầu và đối sách của hệ thống tài chính Việt Nam” (Global Economy Instability and Policies of Vietnam's Financial system) (GEIPOVFS)",
-    },
-    {
-      id: 4,
-      src: "/dieuanhcv/assets/images/gallery/gallery-4.jpg",
-      title: "Chuyến đi Sapa 2025",
-      description: "I like traveling",
-    },
-    {
-      id: 5,
-      src: "/dieuanhcv/assets/images/gallery/gallery-5.jpg",
-      title: "Hội nghị Diên Hồng - My Lovely Squad",
-      description: "Toàn những người đáng yêu",
-    },
-    {
-      id: 6,
-      src: "/dieuanhcv/assets/images/gallery/gallery-6.jpg",
-      title: "Học, học nữa, học mãi",
-      description: "Tôi sống với châm ngôn này",
-    },
-  ];
+  const galleryImages = t("gallery.items", { returnObjects: true }).map(
+    (item) => ({
+      ...item,
+      src: `/dieuanhcv/assets/images/gallery/gallery-${item.id}.jpg`,
+    }),
+  );
 
   const openLightbox = (image) => {
     setSelectedImage(image);
@@ -61,7 +27,7 @@ const Gallery = () => {
   // Navigate to next/previous image
   const navigateImage = (direction) => {
     const currentIndex = galleryImages.findIndex(
-      (img) => img.id === selectedImage.id
+      (img) => img.id === selectedImage.id,
     );
     let newIndex;
 
@@ -93,8 +59,8 @@ const Gallery = () => {
     <section id="gallery" className="gallery">
       <div className="gallery-container">
         <div className="gallery-header">
-          <h2 className="section-title">Gallery</h2>
-          <p className="section-subtitle">Những khoảnh khắc đáng nhớ của tôi</p>
+          <h2 className="section-title">{t("gallery.title")}</h2>
+          <p className="section-subtitle">{t("gallery.subtitle")}</p>
         </div>
 
         <div className="gallery-grid">

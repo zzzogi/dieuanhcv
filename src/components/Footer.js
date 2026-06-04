@@ -1,7 +1,9 @@
 import React from "react";
 import "./Footer.css";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -15,9 +17,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section footer-brand">
             <h3 className="footer-logo">Dieuanh.cv</h3>
-            <p className="footer-tagline">
-              Nhà nghiên cứu khoa học - Đam mê khám phá và sáng tạo
-            </p>
+            <p className="footer-tagline">{t("footer.tagline")}</p>
             <div className="social-links">
               {/* LinkedIn */}
               <a
@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-section">
-            <h4 className="footer-title">Menu</h4>
+            <h4 className="footer-title">{t("footer.menu")}</h4>
             <ul className="footer-links">
               <li>
                 <a
@@ -102,7 +102,7 @@ const Footer = () => {
                     scrollToSection("about");
                   }}
                 >
-                  Về tôi
+                  {t("nav.about")}
                 </a>
               </li>
               <li>
@@ -113,7 +113,7 @@ const Footer = () => {
                     scrollToSection("skills");
                   }}
                 >
-                  Sở trường
+                  {t("nav.skills")}
                 </a>
               </li>
               <li>
@@ -124,7 +124,7 @@ const Footer = () => {
                     scrollToSection("achievements");
                   }}
                 >
-                  Thành tựu
+                  {t("nav.achievements")}
                 </a>
               </li>
               <li>
@@ -135,14 +135,14 @@ const Footer = () => {
                     scrollToSection("experience");
                   }}
                 >
-                  Kinh nghiệm
+                  {t("nav.experience")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h4 className="footer-title">Dự án</h4>
+            <h4 className="footer-title">{t("footer.projects")}</h4>
             <ul className="footer-links">
               <li>
                 <a
@@ -152,7 +152,7 @@ const Footer = () => {
                     scrollToSection("projects");
                   }}
                 >
-                  Tất cả dự án
+                  {t("footer.allProjects")}
                 </a>
               </li>
               <li>
@@ -163,14 +163,14 @@ const Footer = () => {
                     scrollToSection("gallery");
                   }}
                 >
-                  Gallery
+                  {t("gallery.title")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="footer-section footer-contact">
-            <h4 className="footer-title">Liên hệ</h4>
+            <h4 className="footer-title">{t("footer.contact")}</h4>
             <div className="contact-info">
               <p className="contact-item">
                 <svg
@@ -202,7 +202,8 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p>
-            &copy; {new Date().getFullYear()} Dieuanh.cv. All rights reserved.
+            &copy;{" "}
+            {`${new Date().getFullYear()} Dieuanh.cv. ${t("footer.rights")}`}
           </p>
         </div>
       </div>

@@ -1,0 +1,379 @@
+{
+  "nav": {
+    "about": "Về tôi",
+    "skills": "Sở trường",
+    "achievements": "Thành tựu",
+    "experience": "Kinh nghiệm",
+    "projects": "Dự án",
+    "gallery": "Khoảnh khắc"
+  },
+
+  "hero": {
+    "title1": "Khám phá khoa học,",
+    "title2": "Tạo nên giá trị",
+    "description": "Nhà nghiên cứu khoa học với niềm đam mê khám phá và phát triển các giải pháp sáng tạo dựa trên dữ liệu và phương pháp khoa học.",
+    "viewProjects": "Xem dự án",
+    "learnMore": "Tìm hiểu thêm"
+  },
+
+  "about": {
+    "title": "Về bản thân",
+    "paragraph1": "Tôi là cử nhân Kinh tế Quốc tế (GPA 3.89/4.0) với kinh nghiệm nghiên cứu thực tiễn trong lĩnh vực tài chính hành vi và phân tích kinh tế lượng, kết hợp với kiến thức thực tế về hoạt động thương mại quốc tế.",
+    "paragraph2": "Với khả năng dẫn dắt nhóm nghiên cứu, diễn giải kết quả từ các mô hình định lượng và chuyển hóa phát hiện thành những insight rõ ràng, tôi luôn hướng tới việc tạo ra giá trị phân tích thiết thực.",
+    "paragraph3": "Tôi đang tìm kiếm vị trí Strategy/Research Analyst hoặc Consulting, nơi tư duy phân tích nghiêm túc và khả năng kết nối đa lĩnh vực tạo ra tác động kinh doanh thực sự.",
+
+    "stats": {
+      "experience": "Năm kinh nghiệm",
+      "projects": "Dự án nghiên cứu",
+      "papers": "Bài báo công bố"
+    }
+  },
+
+  "skills": {
+    "title": "Sở trường",
+    "subtitle": "Những kỹ năng và chuyên môn mà tôi đã phát triển qua quá trình nghiên cứu",
+
+    "research": {
+      "title": "Phương pháp nghiên cứu",
+      "description": "Thiết kế nghiên cứu, phân tích định tính và định lượng, đánh giá văn bản khoa học"
+    },
+
+    "data": {
+      "title": "Phân tích dữ liệu",
+      "description": "Statistical Analysis, Machine Learning, Data Visualization với Python, R, SPSS"
+    },
+
+    "language": {
+      "title": "Ngoại ngữ",
+      "description": "Đọc tài liệu và viết báo cáo bằng tiếng Anh"
+    },
+
+    "writing": {
+      "title": "Viết bài khoa học",
+      "description": "Biên soạn bài báo, báo cáo nghiên cứu và tài liệu học thuật"
+    },
+
+    "management": {
+      "title": "Quản lý dự án",
+      "description": "Lập kế hoạch, điều phối nhóm nghiên cứu, quản lý thời gian và nguồn lực"
+    },
+
+    "communication": {
+      "title": "Trình bày & Giao tiếp",
+      "description": "Thuyết trình khoa học, hội thảo quốc tế, workshop và đào tạo"
+    }
+  },
+
+  "achievements": {
+    "title": "Thành tựu & Chứng chỉ",
+    "subtitle": "Những cột mốc quan trọng trong hành trình nghiên cứu của tôi",
+    "certificatesCount": "chứng chỉ",
+    "sets": [
+      {
+        "id": 1,
+        "category": "Nghiên cứu khoa học",
+        "title": "Thành tích Nghiên cứu Khoa học",
+        "description": "Giải Nhì - Giải thưởng Khoa học và Công nghệ của Bộ Giáo dục và Đào tạo. Giải Nhất & Giải Nhì - Giải thưởng NCKH sinh viên Đại học Kinh tế Quốc dân",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "Giải Nhất Nghiên cứu Khoa học cấp Đại học 2025",
+            "organization": "Đại học Kinh tế Quốc dân",
+            "year": "2025",
+            "description": "Giải Nhất Nghiên cứu khoa học sinh viên cấp Đại học 2025 với đề tài \"Tác động bất đối xứng của chất lượng thể chế đến du lịch: Nghiên cứu tại các quốc gia thành viên ASEAN\""
+          },
+          {
+            "id": 2,
+            "title": "Giải Nhì Nghiên cứu Khoa học cấp Đại học 2025",
+            "organization": "Đại học Kinh tế Quốc dân",
+            "year": "2025",
+            "description": "Giải Nhì Nghiên cứu khoa học sinh viên cấp Đại học 2025 với đề tài \"Ảnh hưởng của hội chứng FOMO đến ý định đầu tư vàng tại Việt Nam\""
+          },
+          {
+            "id": 3,
+            "title": "The certificate of acceptance for the manuscript (ijfs-3794202) titled: \"The role of Fear of Missing Out (FOMO), Loss Aversion, and Herd Behavior in Gold Investment Decisions: A Study in the Vietnamese Market\"",
+            "organization": "International Journal of IMPACT Financial Studies",
+            "year": "2025",
+            "description": "Bài báo được đăng trên tạp chí quốc tế uy tín - Nhà xuất bản MDPI"
+          },
+          {
+            "id": 4,
+            "title": "CERTIFICATE OF PRESENTATION: Impacts of FOMO on investment decisions in gold: A Study in the Vietnamese Market",
+            "organization": "CIEMB",
+            "year": "2025",
+            "description": "Chứng chỉ trình bày tại Hội thảo quốc tế về Kinh tế và Quản lý kinh doanh CIEMB 2025"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "category": "Tình Nguyện Xuất Sắc",
+        "title": "Có thành tích xuất sắc trong hoạt động tình nguyện 2024-2025",
+        "description": "Sau khi thu thập đủ 15+ chứng chỉ tình nguyện trong năm học 2024-2025, tôi đã vinh dự nhận được giấy khen từ Ban Chấp Hành Hội Sinh Viên Đại Học Kinh Tế Quốc Dân",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "Có thành tích xuất sắc trong hoạt động tình nguyện 2024-2025",
+            "organization": "BAN CHẤP HÀNH HỘI SINH VIÊN VIỆT NAM ĐẠI HỌC KINH TẾ QUỐC DÂN",
+            "year": "2025",
+            "description": "Sau khi thu thập đủ 15+ chứng chỉ tình nguyện trong năm học 2024-2025, tôi đã vinh dự nhận được giấy khen từ Ban Chấp Hành Hội Sinh Viên Đại Học Kinh Tế Quốc Dân"
+          },
+          {
+            "id": 2,
+            "title": "Tham gia 01 ngày tình nguyện Chiến dịch tình nguyện \"Sắc thu\"",
+            "organization": "Hội sinh viên Việt Nam trường Đại học Kinh tế Quốc dân",
+            "year": "2024",
+            "description": ""
+          },
+          {
+            "id": 3,
+            "title": "Tham gia 01 ngày tình nguyện Hiến máu tình nguyện",
+            "organization": "BCĐ vận động hiến máu tình nguyện thành phố Hà Nội",
+            "year": "2024",
+            "description": ""
+          },
+          {
+            "id": 4,
+            "title": "Tham gia 01 ngày tình nguyện chương trình \"Tình nguyện mùa xuân 2025\"",
+            "organization": "Đội thanh niên tình nguyện khoa Kinh tế và Kinh doanh quốc tế",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 5,
+            "title": "Tham gia 01 ngày tình nguyện \"Góp mì cho em\" tại Thạnh Hoà, Hậu Giang",
+            "organization": "Dự án thiện nguyện Lá Xanh",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 6,
+            "title": "Tham gia 01 ngày tình nguyện: Là tình nguyện viên xuất sắc khi tham gia chiến dịch \"Clean up Việt Nam lần 7\"",
+            "organization": "Bộ Nông Nghiệp và Môi trường",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 7,
+            "title": "Tham gia 01 ngày tình nguyện \"Kết nắng gửi thương 2025\" và Chiến dịch gây quỹ \"30k - Góp nắng yêu thương\"",
+            "organization": "CLB Sinh viên 5 tốt - Đại học Kinh tế Quốc dân",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 8,
+            "title": "Tham gia 01 ngày tình nguyện quyên góp sách vở và đồ dùng học tập trong Chiến dịch Hè xanh màu áo Tự hào Quản trị",
+            "organization": "Liên chi Đoàn Khoa Quản trị kinh doanh - NEU",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 9,
+            "title": "Tham gia 01 ngày tình nguyện trao tặng cờ trong Chương trình \"Trao gửi cờ Tổ quốc - Gửi triệu niềm tin về nơi cội nguồn cách mạng\"",
+            "organization": "Liên chi Đoàn Khoa Quản trị kinh doanh - NEU",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 10,
+            "title": "Tham gia 01 ngày tình nguyện Vận động quyên góp đồ dùng học tập trong chiến dịch \"Sắc màu linh sơn\"",
+            "organization": "Ban Chấp Hành Liên Chi Đoàn Khoa Du lịch và Khách sạn - NEU",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 11,
+            "title": "Tham gia 01 ngày tình nguyện Chương trình \"Mùa hè xanh 2025 - Ngàn trái tim xanh, Vạn tia nắng ấm\"",
+            "organization": "Đội thanh niên tình nguyện khoa Kinh tế và Kinh doanh quốc tế",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 12,
+            "title": "Tham gia 01 ngày tình nguyện Chương trình tình nguyện hè \"Gieo mầm yêu thương\"",
+            "organization": "Hội sinh viên trường Đại học Thương mại",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 13,
+            "title": "Tham gia 01 ngày tình nguyện quyên góp Chương trình \"Trung thu cho em\"",
+            "organization": "Dự án thiện nguyện Lá Xanh",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 14,
+            "title": "Tham gia 01 ngày tình nguyện quyên góp Chương trình \"Trung thu đoàn viên\"",
+            "organization": "Dự án thiện nguyện Lá Xanh",
+            "year": "2025",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "category": "Sinh viên 5 Tốt",
+        "title": "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2023 - 2024",
+        "description": "",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2023 - 2024",
+            "organization": "Ban Chấp hành Hội Sinh viên Đại học Kinh tế Quốc dân",
+            "year": "2023 - 2024",
+            "description": ""
+          },
+          {
+            "id": 2,
+            "title": "Danh hiệu Sinh viên 5 Tốt cấp Đại học năm 2023 - 2024",
+            "organization": "Ban Chấp hành Hội Sinh viên Đại học Kinh tế Quốc dân",
+            "year": "2023 - 2024",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "category": "Đoàn viên tiêu biểu xuất sắc",
+        "title": "Đạt danh hiệu \"Đoàn viên tiêu biểu xuất sắc\" cấp Đại học năm học 2024 - 2025",
+        "description": "",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "Đạt danh hiệu \"Đoàn viên tiêu biểu xuất sắc\" cấp Đại học năm học 2024 - 2025",
+            "organization": "Đoàn TNCS Hồ Chí Minh - Đại học Kinh tế Quốc dân",
+            "year": "2025",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "category": "Sinh viên 5 tốt cấp Thành phố",
+        "title": "Danh hiệu Sinh viên 5 Tốt cấp Thành phố năm 2024-2025",
+        "description": "",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "Đạt danh hiệu \"Sinh viên 5 tốt\" cấp Thành phố năm học 2024 - 2025",
+            "organization": "",
+            "year": "2024 - 2025",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "category": "Sinh viên tiêu biểu",
+        "title": "Danh hiệu Sinh viên tiêu biểu Đại học Kinh tế Quốc dân năm 2025 - 2026",
+        "description": "",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "Đạt danh hiệu \"Sinh viên tiêu biểu\" cấp Đại học năm học 2025 - 2026",
+            "organization": "Đại học Kinh tế Quốc dân",
+            "year": "2025 - 2026",
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+
+  "experience": {
+    "title": "Kinh nghiệm làm việc",
+    "subtitle": "Hành trình phát triển nghề nghiệp trong lĩnh vực nghiên cứu khoa học",
+    "items": [
+      {
+        "step": "01",
+        "position": "Bí thư Đoàn trường",
+        "organization": "THPT Lê Quý Đôn - Đống Đa",
+        "period": "2019 - 2022",
+        "description": "Lãnh đạo và tổ chức các hoạt động Đoàn, quản lý đội ngũ hơn 20 thành viên."
+      },
+      {
+        "step": "02",
+        "position": "Sinh viên",
+        "organization": "Đại học Kinh tế Quốc dân",
+        "period": "2022 - Hiện tại",
+        "description": "Sinh viên chuyên ngành Kinh tế quốc tế, tích cực tham gia các hoạt động nghiên cứu khoa học và CLB sinh viên."
+      },
+      {
+        "step": "03",
+        "position": "Trợ giảng",
+        "organization": "Trung tâm IELTS - ODIN Education",
+        "period": "2022 - 04/2026",
+        "description": "Hỗ trợ giảng dạy và hướng dẫn học viên trong các khóa học IELTS, giúp cải thiện kỹ năng ngôn ngữ và chiến lược làm bài."
+      },
+      {
+        "step": "04",
+        "position": "Nghiên cứu sinh",
+        "organization": "Đại học Kinh tế Quốc dân",
+        "period": "2022 - Hiện tại",
+        "description": "Tham gia 10+ dự án nghiên cứu, học phương pháp phân tích dữ liệu và thống kê."
+      },
+      {
+        "step": "05",
+        "position": "Điều tra viên kinh tế",
+        "organization": "Tổng Cục thống kê Thành phố Hà Nội",
+        "period": "2026",
+        "description": "Tham gia thực hiện điều tra, phân tích dữ liệu 100 doanh nghiệp trên địa bàn Cầu Giấy."
+      }
+    ]
+  },
+
+  "projects": {
+    "title": "Công trình nghiên cứu",
+    "subtitle": "Các bài báo khoa học đã được công bố trên tạp chí quốc tế",
+    "publishedWorks": "Sản phẩm công bố",
+    "downloadPdf": "Tải file PDF",
+    "citations": "lượt trích dẫn"
+  },
+
+  "gallery": {
+    "title": "Khoảnh khắc",
+    "subtitle": "Những khoảnh khắc đáng nhớ của tôi",
+    "items": [
+      {
+        "id": 1,
+        "title": "Giải Nhất Nghiên cứu khoa học cấp Đại học 2025",
+        "description": "Giải Nhất Nghiên cứu khoa học cấp Đại học 2025 với đề tài \"Tác động bất đối xứng của chất lượng thể chế đến du lịch: Nghiên cứu tại các quốc gia thành viên ASEAN\""
+      },
+      {
+        "id": 2,
+        "title": "Giải Nhì Nghiên cứu khoa học cấp Đại học 2025",
+        "description": "Giải Nhì Nghiên cứu khoa học cấp Đại học 2025 với đề tài \"Ảnh hưởng của hội chứng FOMO đến ý định đầu tư vàng tại Việt Nam\""
+      },
+      {
+        "id": 3,
+        "title": "Hội thảo khoa học quốc tế GEIPOVFS",
+        "description": "Tham gia và trình bày bài nghiên cứu tại Hội thảo khoa học quốc tế \"Bất ổn kinh tế toàn cầu và đối sách của hệ thống tài chính Việt Nam\" (GEIPOVFS)"
+      },
+      {
+        "id": 4,
+        "title": "Chuyến đi Sapa 2025",
+        "description": "I like traveling"
+      },
+      {
+        "id": 5,
+        "title": "Hội nghị Diên Hồng - My Lovely Squad",
+        "description": "Toàn những người đáng yêu"
+      },
+      {
+        "id": 6,
+        "title": "Học, học nữa, học mãi",
+        "description": "Tôi sống với châm ngôn này"
+      }
+    ]
+  },
+
+  "footer": {
+    "tagline": "Nhà nghiên cứu khoa học - Đam mê khám phá và sáng tạo",
+    "menu": "Mục lục",
+    "projects": "Dự án",
+    "contact": "Liên hệ",
+    "allProjects": "Tất cả dự án",
+    "rights": "Tất cả quyền được bảo lưu"
+  }
+}

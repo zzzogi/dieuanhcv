@@ -1,0 +1,379 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "achievements": "Achievements",
+    "experience": "Experience",
+    "projects": "Projects",
+    "gallery": "Gallery"
+  },
+
+  "hero": {
+    "title1": "Exploring Science,",
+    "title2": "Creating Value",
+    "description": "A scientific researcher passionate about discovery and developing innovative solutions through data and scientific methods.",
+    "viewProjects": "View Projects",
+    "learnMore": "Learn More"
+  },
+
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I am an International Economics graduate (GPA 3.89/4.0) with hands-on research experience in behavioral finance and econometric analysis, combined with practical exposure to international trade operations.",
+    "paragraph2": "Proven ability to lead research teams, interpret quantitative model outputs, and translate findings into clear, actionable insights that bridge analytical rigor with real-world business context.",
+    "paragraph3": "I am seeking a Strategy/Research Analyst or Consulting role where cross-functional thinking and data-driven analysis drive meaningful business impact.",
+
+    "stats": {
+      "experience": "Years Experience",
+      "projects": "Research Projects",
+      "papers": "Published Papers"
+    }
+  },
+
+  "skills": {
+    "title": "Expertise",
+    "subtitle": "Skills and competencies developed throughout my research journey",
+
+    "research": {
+      "title": "Research Methodology",
+      "description": "Research design, qualitative and quantitative analysis, scientific literature review"
+    },
+
+    "data": {
+      "title": "Data Analysis",
+      "description": "Statistical Analysis, Machine Learning, Data Visualization using Python, R, and SPSS"
+    },
+
+    "language": {
+      "title": "Languages",
+      "description": "Reading academic literature and writing reports in English"
+    },
+
+    "writing": {
+      "title": "Academic Writing",
+      "description": "Writing scientific papers, research reports, and academic documents"
+    },
+
+    "management": {
+      "title": "Project Management",
+      "description": "Planning, coordinating research teams, and managing resources"
+    },
+
+    "communication": {
+      "title": "Presentation & Communication",
+      "description": "Scientific presentations, international conferences, workshops, and training"
+    }
+  },
+
+  "achievements": {
+    "title": "Achievements & Certificates",
+    "subtitle": "Important milestones in my research journey",
+    "certificatesCount": "certificates",
+    "sets": [
+      {
+        "id": 1,
+        "category": "Scientific Research",
+        "title": "Scientific Research Achievements",
+        "description": "Second Prize - Science and Technology Award by the Ministry of Education and Training. First & Second Prize - Student Scientific Research Award at National Economics University",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "First Prize - University-Level Student Scientific Research 2025",
+            "organization": "National Economics University",
+            "year": "2025",
+            "description": "First Prize in the 2025 University-Level Student Scientific Research competition for the topic: \"Asymmetric Effects of Institutional Quality on Tourism: Evidence from ASEAN Member States\""
+          },
+          {
+            "id": 2,
+            "title": "Second Prize - University-Level Student Scientific Research 2025",
+            "organization": "National Economics University",
+            "year": "2025",
+            "description": "Second Prize in the 2025 University-Level Student Scientific Research competition for the topic: \"The Impact of FOMO Syndrome on Gold Investment Intentions in Vietnam\""
+          },
+          {
+            "id": 3,
+            "title": "Certificate of Acceptance for the manuscript (ijfs-3794202): \"The role of Fear of Missing Out (FOMO), Loss Aversion, and Herd Behavior in Gold Investment Decisions: A Study in the Vietnamese Market\"",
+            "organization": "International Journal of IMPACT Financial Studies",
+            "year": "2025",
+            "description": "Paper accepted in a reputable international journal published by MDPI"
+          },
+          {
+            "id": 4,
+            "title": "Certificate of Presentation: Impacts of FOMO on investment decisions in gold: A Study in the Vietnamese Market",
+            "organization": "CIEMB",
+            "year": "2025",
+            "description": "Certificate of presentation at the CIEMB 2025 International Conference on Economics and Business Management"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "category": "Outstanding Volunteer",
+        "title": "Outstanding Volunteer Achievement 2024-2025",
+        "description": "After accumulating 15+ volunteer certificates during the 2024-2025 academic year, I was honored to receive a commendation from the Student Union Executive Board of National Economics University.",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "Outstanding Volunteer Achievement 2024-2025",
+            "organization": "VIETNAM STUDENT ASSOCIATION - NATIONAL ECONOMICS UNIVERSITY",
+            "year": "2025",
+            "description": "After accumulating 15+ volunteer certificates during the 2024-2025 academic year, I was honored to receive a commendation from the Student Union Executive Board of National Economics University."
+          },
+          {
+            "id": 2,
+            "title": "1-day volunteer - \"Autumn Colors\" Volunteer Campaign",
+            "organization": "Vietnam Student Association - National Economics University",
+            "year": "2024",
+            "description": ""
+          },
+          {
+            "id": 3,
+            "title": "1-day volunteer - Blood Donation Drive",
+            "organization": "Hanoi Voluntary Blood Donation Mobilization Committee",
+            "year": "2024",
+            "description": ""
+          },
+          {
+            "id": 4,
+            "title": "1-day volunteer - \"Spring Volunteering 2025\" Program",
+            "organization": "Youth Volunteer Team - Faculty of Economics and International Business",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 5,
+            "title": "1-day volunteer - \"Donate Instant Noodles for Children\" at Thanh Hoa, Hau Giang",
+            "organization": "La Xanh Charitable Project",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 6,
+            "title": "1-day volunteer - Outstanding volunteer at \"Clean Up Vietnam - Round 7\" Campaign",
+            "organization": "Ministry of Agriculture and Environment",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 7,
+            "title": "1-day volunteer - \"Ket Nang Gui Thuong 2025\" & Fundraising Campaign \"30k - Share the Sunshine\"",
+            "organization": "Student of 5 Merits Club - National Economics University",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 8,
+            "title": "1-day volunteer - School supply donation drive in \"Green Summer - Pride of Management\" Campaign",
+            "organization": "Youth Union - Faculty of Business Administration, NEU",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 9,
+            "title": "1-day volunteer - Flag gifting program \"Sending the National Flag - Delivering Trust to Revolutionary Roots\"",
+            "organization": "Youth Union - Faculty of Business Administration, NEU",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 10,
+            "title": "1-day volunteer - School supply donation in \"Sac Mau Linh Son\" Summer Volunteer Campaign",
+            "organization": "Youth Union - Faculty of Tourism and Hospitality, NEU",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 11,
+            "title": "1-day volunteer - \"Green Summer 2025 - A Thousand Green Hearts, Ten Thousand Warm Rays\" Program",
+            "organization": "Youth Volunteer Team - Faculty of Economics and International Business",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 12,
+            "title": "1-day volunteer - Summer Volunteering Program \"Sow Seeds of Love\"",
+            "organization": "Student Union - Hanoi University of Commerce",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 13,
+            "title": "1-day volunteer - Donation Drive \"Mid-Autumn for Children\"",
+            "organization": "La Xanh Charitable Project",
+            "year": "2025",
+            "description": ""
+          },
+          {
+            "id": 14,
+            "title": "1-day volunteer - Donation Drive \"Mid-Autumn Reunion\"",
+            "organization": "La Xanh Charitable Project",
+            "year": "2025",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "category": "Student of 5 Merits",
+        "title": "University-Level \"Student of 5 Merits\" Title 2023-2024",
+        "description": "",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "University-Level \"Student of 5 Merits\" Title 2023-2024",
+            "organization": "Student Union Executive Board - National Economics University",
+            "year": "2023 - 2024",
+            "description": ""
+          },
+          {
+            "id": 2,
+            "title": "University-Level \"Student of 5 Merits\" Title 2023-2024",
+            "organization": "Student Union Executive Board - National Economics University",
+            "year": "2023 - 2024",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "category": "Outstanding Youth Member",
+        "title": "University-Level \"Outstanding Youth Member\" Title 2024-2025",
+        "description": "",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "University-Level \"Outstanding Youth Member\" Title 2024-2025",
+            "organization": "Ho Chi Minh Communist Youth Union - National Economics University",
+            "year": "2025",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "category": "City-Level Student of 5 Merits",
+        "title": "City-Level \"Student of 5 Merits\" Title 2024-2025",
+        "description": "",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "City-Level \"Student of 5 Merits\" Title 2024-2025",
+            "organization": "",
+            "year": "2024 - 2025",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "category": "Outstanding Student",
+        "title": "Outstanding Student of National Economics University 2025-2026",
+        "description": "",
+        "certificates": [
+          {
+            "id": 1,
+            "title": "University-Level \"Outstanding Student\" Title 2025-2026",
+            "organization": "National Economics University",
+            "year": "2025 - 2026",
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey in research and beyond",
+    "items": [
+      {
+        "step": "01",
+        "position": "Secretary of the Youth Union",
+        "organization": "Le Quy Don High School - Dong Da",
+        "period": "2019 - 2022",
+        "description": "Led and organized Youth Union activities, managed a team of over 20 members."
+      },
+      {
+        "step": "02",
+        "position": "Student",
+        "organization": "National Economics University",
+        "period": "2022 - Present",
+        "description": "Majoring in International Economics, actively participating in scientific research and student clubs."
+      },
+      {
+        "step": "03",
+        "position": "Teaching Assistant",
+        "organization": "IELTS Center - ODIN Education",
+        "period": "2022 - 04/2026",
+        "description": "Assisted in teaching and mentoring students in IELTS courses, helping improve language skills and exam strategies."
+      },
+      {
+        "step": "04",
+        "position": "Research Student",
+        "organization": "National Economics University",
+        "period": "2022 - Present",
+        "description": "Participated in 10+ research projects, gaining hands-on experience in data analysis and statistical methods."
+      },
+      {
+        "step": "05",
+        "position": "Economic Survey Officer",
+        "organization": "Hanoi General Statistics Office",
+        "period": "2026",
+        "description": "Conducted field surveys and analyzed data from 100 enterprises in Cau Giay district."
+      }
+    ]
+  },
+
+  "projects": {
+    "title": "Research Publications",
+    "subtitle": "Scientific papers published in international journals",
+    "publishedWorks": "Published Works",
+    "downloadPdf": "Download PDF",
+    "citations": "citations"
+  },
+
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Memorable moments from my journey",
+    "items": [
+      {
+        "id": 1,
+        "title": "First Prize – University-Level Scientific Research 2025",
+        "description": "First Prize in the 2025 University-Level Student Scientific Research competition for the topic: \"Asymmetric Effects of Institutional Quality on Tourism: Evidence from ASEAN Member States\""
+      },
+      {
+        "id": 2,
+        "title": "Second Prize – University-Level Scientific Research 2025",
+        "description": "Second Prize in the 2025 University-Level Student Scientific Research competition for the topic: \"The Impact of FOMO Syndrome on Gold Investment Intentions in Vietnam\""
+      },
+      {
+        "id": 3,
+        "title": "GEIPOVFS International Scientific Conference",
+        "description": "Participated and presented research at the International Conference on \"Global Economy Instability and Policies of Vietnam's Financial System\" (GEIPOVFS)"
+      },
+      {
+        "id": 4,
+        "title": "Sapa Trip 2025",
+        "description": "I like traveling"
+      },
+      {
+        "id": 5,
+        "title": "Dien Hong Conference - My Lovely Squad",
+        "description": "The loveliest people around"
+      },
+      {
+        "id": 6,
+        "title": "Always Keep Learning",
+        "description": "This is the motto I live by"
+      }
+    ]
+  },
+
+  "footer": {
+    "tagline": "Scientific Researcher - Passionate about discovery and innovation",
+    "menu": "Menu",
+    "projects": "Projects",
+    "contact": "Contact",
+    "allProjects": "All Projects",
+    "rights": "All rights reserved"
+  }
+}
