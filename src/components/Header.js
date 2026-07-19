@@ -175,72 +175,26 @@ const Header = () => {
         </div>
 
         <div className="mobile-menu-content">
-          <a
-            href="#about"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("about");
-            }}
-          >
-            <span className="menu-icon">👤</span>
-            <span className="menu-text">{t("nav.about")}</span>
-            <span className="menu-arrow">→</span>
-          </a>
-          <a
-            href="#skills"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("skills");
-            }}
-          >
-            <span className="menu-icon">⚡</span>
-            <span className="menu-text">{t("nav.skills")}</span>
-            <span className="menu-arrow">→</span>
-          </a>
-          <a
-            href="#achievements"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("achievements");
-            }}
-          >
-            <span className="menu-icon">🏆</span>
-            <span className="menu-text">{t("nav.achievements")}</span>
-            <span className="menu-arrow">→</span>
-          </a>
-          <a
-            href="#experience"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("experience");
-            }}
-          >
-            <span className="menu-icon">💼</span>
-            <span className="menu-text">{t("nav.experience")}</span>
-            <span className="menu-arrow">→</span>
-          </a>
-          <a
-            href="#projects"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("projects");
-            }}
-          >
-            <span className="menu-icon">📚</span>
-            <span className="menu-text">{t("nav.projects")}</span>
-            <span className="menu-arrow">→</span>
-          </a>
-          <a
-            href="#gallery"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("gallery");
-            }}
-          >
-            <span className="menu-icon">📸</span>
-            <span className="menu-text">{t("nav.gallery")}</span>
-            <span className="menu-arrow">→</span>
-          </a>
+          {[
+            ["about", "01", t("nav.about")],
+            ["skills", "02", t("nav.skills")],
+            ["achievements", "03", t("nav.achievements")],
+            ["experience", "04", t("nav.experience")],
+            ["projects", "05", t("nav.projects")],
+            ["gallery", "06", t("nav.gallery")],
+          ].map(([id, num, label]) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(id);
+              }}
+            >
+              <span className="menu-num">{num}</span>
+              <span className="menu-text">{label}</span>
+            </a>
+          ))}
         </div>
 
         <div className="mobile-menu-footer">
