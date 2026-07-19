@@ -4,9 +4,9 @@
 }
 
 .about-container {
-  max-width: 1400px;
+  max-width: var(--container);
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 var(--gutter);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
@@ -104,26 +104,6 @@
 /* Content Section */
 .about-content {
   animation: fadeInUp 1s ease-out;
-  text-align: justify;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--dark);
-  margin-bottom: 30px;
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background-color: var(--primary-green);
 }
 
 .about-text {
@@ -221,10 +201,6 @@
 
   .about-container {
     padding: 0 20px;
-  }
-
-  .section-title {
-    font-size: 2rem;
   }
 
   .about-text {

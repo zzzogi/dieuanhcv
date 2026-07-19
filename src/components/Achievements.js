@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Achievements.css";
+import SectionHeader from "./SectionHeader";
 import { useTranslation } from "react-i18next";
 
 const Achievements = () => {
@@ -280,10 +281,11 @@ const Achievements = () => {
   return (
     <section id="achievements" className="achievements">
       <div className="achievements-container">
-        <div className="achievements-header">
-          <h2 className="section-title">{t("achievements.title")}</h2>
-          <p className="section-subtitle">{t("achievements.subtitle")}</p>
-        </div>
+        <SectionHeader
+          number="03"
+          title={t("achievements.title")}
+          subtitle={t("achievements.subtitle")}
+        />
 
         <div className="certificate-sets-grid">
           {certificateSets.map((set) => (

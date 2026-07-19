@@ -1,5 +1,6 @@
 import React from "react";
 import "./Experience.css";
+import SectionHeader from "./SectionHeader";
 import { useTranslation } from "react-i18next";
 
 const Experience = () => {
@@ -9,10 +10,11 @@ const Experience = () => {
   return (
     <section id="experience" className="experience">
       <div className="experience-container">
-        <div className="experience-header">
-          <h2 className="section-title">{t("experience.title")}</h2>
-          <p className="section-subtitle">{t("experience.subtitle")}</p>
-        </div>
+        <SectionHeader
+          number="04"
+          title={t("experience.title")}
+          subtitle={t("experience.subtitle")}
+        />
 
         <div className="experience-timeline">
           {experienceData.map((exp, index) => (

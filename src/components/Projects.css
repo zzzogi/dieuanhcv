@@ -3,42 +3,12 @@
   background-color: var(--white);
 }
 
+/* The reading desk gets a wider container than the journal text column —
+   a deliberate exception so the PDF page stays comfortably legible. */
 .projects-container {
-  max-width: 1600px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 60px;
-}
-
-.projects-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--dark);
-  margin-bottom: 15px;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 15px;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background-color: var(--primary-green);
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--gray);
-  margin-top: 15px;
+  padding: 0 var(--gutter);
 }
 
 /* PDF Reader Layout */

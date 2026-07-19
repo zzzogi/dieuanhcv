@@ -1,5 +1,6 @@
 import React from "react";
 import "./Skills.css";
+import SectionHeader from "./SectionHeader";
 import { useTranslation } from "react-i18next";
 
 const Skills = () => {
@@ -40,10 +41,11 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="skills-container">
-        <div className="skills-header">
-          <h2 className="section-title">{t("skills.title")}</h2>
-          <p className="section-subtitle">{t("skills.subtitle")}</p>
-        </div>
+        <SectionHeader
+          number="02"
+          title={t("skills.title")}
+          subtitle={t("skills.subtitle")}
+        />
 
         <div className="skills-grid">
           {skillsData.map((skill, index) => (

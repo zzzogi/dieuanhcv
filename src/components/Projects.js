@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Projects.css";
+import SectionHeader from "./SectionHeader";
 import { useTranslation } from "react-i18next";
 
 const Projects = () => {
@@ -154,10 +155,11 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
-        <div className="projects-header">
-          <h2 className="section-title">{t("projects.title")}</h2>
-          <p className="section-subtitle">{t("projects.subtitle")}</p>
-        </div>
+        <SectionHeader
+          number="05"
+          title={t("projects.title")}
+          subtitle={t("projects.subtitle")}
+        />
 
         <div className="pdf-reader-layout">
           {/* Left Sidebar - Paper List */}

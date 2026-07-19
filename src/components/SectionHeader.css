@@ -1,0 +1,50 @@
+.journal-header {
+  margin-bottom: 56px;
+}
+
+.journal-rule {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.journal-number {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--green);
+}
+
+.journal-line {
+  flex: 1;
+  border-top: 1px solid var(--hairline);
+}
+
+.journal-title {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.journal-subtitle {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-top: 12px;
+  max-width: 62ch;
+}
+
+@media (max-width: 768px) {
+  .journal-header {
+    margin-bottom: 40px;
+  }
+
+  .journal-title {
+    font-size: 1.75rem;
+  }
+}

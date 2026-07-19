@@ -50,6 +50,13 @@ body {
   background-color: var(--paper);
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
 ::selection {
   background-color: var(--selection);
   color: var(--ink);

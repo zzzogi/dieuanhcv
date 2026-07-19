@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Gallery.css";
 import OptimizedImage from "./OptimizedImage";
+import SectionHeader from "./SectionHeader";
 import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
@@ -58,10 +59,11 @@ const Gallery = () => {
   return (
     <section id="gallery" className="gallery">
       <div className="gallery-container">
-        <div className="gallery-header">
-          <h2 className="section-title">{t("gallery.title")}</h2>
-          <p className="section-subtitle">{t("gallery.subtitle")}</p>
-        </div>
+        <SectionHeader
+          number="06"
+          title={t("gallery.title")}
+          subtitle={t("gallery.subtitle")}
+        />
 
         <div className="gallery-grid">
           {galleryImages.map((image) => (

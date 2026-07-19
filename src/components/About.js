@@ -1,5 +1,6 @@
 import "./About.css";
 import OptimizedImage from "./OptimizedImage";
+import SectionHeader from "./SectionHeader";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
@@ -27,7 +28,7 @@ const About = () => {
         </div>
 
         <div className="about-content">
-          <h2 className="section-title">{t("about.title")}</h2>
+          <SectionHeader number="01" title={t("about.title")} />
           <p className="about-text">{t("about.paragraph1")}</p>
           <p className="about-text">{t("about.paragraph2")}</p>
           <p className="about-text">{t("about.paragraph3")}</p>
