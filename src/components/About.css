@@ -13,92 +13,56 @@
   align-items: center;
 }
 
-/* Image Section with Decorative Elements */
+/* Portrait as a mounted figure */
 .about-image {
-  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  animation: fadeInLeft 1s ease-out;
+  gap: 16px;
+  margin: 0;
+  animation: fadeInLeft 1s var(--ease);
 }
 
 .image-frame {
   position: relative;
   width: 100%;
-  max-width: 450px;
+  max-width: 420px;
   aspect-ratio: 3/4;
 }
 
-/* Your Actual Photo */
 .about-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 30px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  box-shadow: 0 16px 40px rgba(31, 29, 26, 0.12);
   position: relative;
   z-index: 2;
-  transition: transform 0.3s ease;
 }
 
-.about-photo:hover {
-  transform: scale(1.02);
-}
-
-/* Decorative Border Accent */
+/* Offset hairline frame, like a print mounted off-register */
 .border-accent {
   position: absolute;
-  top: -15px;
-  left: -15px;
-  right: 15px;
-  bottom: 15px;
-  border: 3px solid var(--primary-green);
-  border-radius: 30px;
+  top: -12px;
+  left: -12px;
+  right: 12px;
+  bottom: 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
   z-index: 1;
-  transition: all 0.3s ease;
 }
 
-.image-frame:hover .border-accent {
-  top: -20px;
-  left: -20px;
-  right: 20px;
-  bottom: 20px;
-  border-color: var(--primary-blue);
-}
-
-/* Decorative Dots */
-.decorative-dot {
-  position: absolute;
-  border-radius: 50%;
-  z-index: 3;
-  animation: float 4s ease-in-out infinite;
-}
-
-.dot-1 {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(8, 146, 115, 0.4);
-  top: -25px;
-  right: -25px;
-  animation-delay: 0s;
-}
-
-.dot-2 {
-  width: 35px;
-  height: 35px;
-  background-color: rgba(20, 142, 254, 0.4);
-  bottom: -15px;
-  left: -15px;
-  animation-delay: 1s;
-}
-
-.dot-3 {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(8, 146, 115, 0.3);
-  bottom: 30%;
-  right: -20px;
-  animation-delay: 2s;
+.figure-caption {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-faint);
+  align-self: flex-start;
+  padding-top: 12px;
+  border-top: 1px solid var(--hairline-soft);
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 /* Content Section */
@@ -107,41 +71,11 @@
 }
 
 .about-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--gray);
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--ink-soft);
   margin-bottom: 20px;
-}
-
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 20px;
-  background-color: var(--light-bg);
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.stat-item:hover {
-  transform: translateY(-5px);
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-blue);
-  margin-bottom: 10px;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: var(--gray);
+  max-width: 68ch;
 }
 
 /* Animations */
@@ -167,16 +101,6 @@
   }
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-15px) scale(1.1);
-  }
-}
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .about-container {
@@ -187,10 +111,6 @@
   .image-frame {
     max-width: 350px;
     margin: 0 auto;
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -216,27 +136,5 @@
     left: -10px;
     right: 10px;
     bottom: 10px;
-  }
-
-  .dot-1 {
-    width: 35px;
-    height: 35px;
-    top: -15px;
-    right: -15px;
-  }
-
-  .dot-2 {
-    width: 25px;
-    height: 25px;
-  }
-
-  .dot-3 {
-    width: 30px;
-    height: 30px;
-  }
-
-  .about-stats {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 }
