@@ -1,25 +1,29 @@
-/* Hero as the opening plate of a journal. The portrait is Figure 0:
-   oversized, grounded on a baseline rule, annotated with leader lines
-   that land on real objects in the photograph. Everything is sized from
-   --fig-h so the annotation dots track the same photo features at any
-   viewport. */
+/* Hero: classic two-column spread. The portrait is treated as a
+   constructed studio photograph — a rectangular plate with backdrop,
+   light and vignette — that she physically steps out of: head, shoulders
+   and trophy break the frame's top edge. All plate geometry derives from
+   --fig-h (portrait ratio 901/1353 → width factor 0.666). */
 
 .hero {
   --hero-pad: var(--gutter);
-  --fig-h: min(64vh, 620px);
-  /* portrait intrinsic ratio 901/1353 */
+  --fig-h: min(66vh, 600px);
   --fig-w: calc(var(--fig-h) * 0.666);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: var(--paper);
   padding-top: 80px;
   border-bottom: 1px solid var(--hairline);
 }
 
 .hero-masthead,
-.hero-plate,
-.hero-below,
+.hero-container,
 .hero-footline {
+  width: 100%;
   max-width: var(--container);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: var(--hero-pad);
   padding-right: var(--hero-pad);
 }
@@ -34,6 +38,7 @@
   gap: 8px;
   padding-top: 22px;
   padding-bottom: 14px;
+  border-bottom: 1px solid var(--hairline);
   animation: fadeIn 0.6s var(--ease) backwards;
 }
 
@@ -53,131 +58,29 @@
   color: var(--ink-faint);
 }
 
-/* Rule under the masthead, container-wide */
-.hero-masthead {
-  border-bottom: 1px solid var(--hairline);
-}
+/* ---- Two-column spread ---- */
 
-/* ---- The plate ---- */
-
-.hero-plate {
-  position: relative;
-  height: var(--fig-h);
-  margin-top: 48px;
-}
-
-.hero-portrait {
-  display: block;
-  height: var(--fig-h);
-  width: auto;
-  animation: riseIn 0.9s var(--ease) 0.1s backwards;
-}
-
-/* Annotations: dot on the photo, dashed leader to a note in the margin */
-.annotation {
-  position: absolute;
-  top: calc(var(--fig-h) * var(--ay));
-  left: calc(var(--hero-pad) + var(--fig-w) * var(--ax));
-  right: var(--hero-pad);
-  display: flex;
-  align-items: flex-start;
-}
-
-.anno-dot {
-  flex-shrink: 0;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--green);
-  margin-top: calc(0.55em - 3px);
-  transition: transform var(--dur) var(--ease);
-}
-
-.anno-line {
+.hero-container {
   flex: 1;
-  border-top: 1px dashed rgba(31, 29, 26, 0.4);
-  margin: 0.55em 10px 0 8px;
-  transform-origin: left center;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  column-gap: 56px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 24px;
 }
 
-.anno-label {
-  flex-shrink: 0;
-  width: 220px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  line-height: 1.55;
-  color: var(--ink-soft);
-  transition: color var(--dur) var(--ease);
-}
-
-.annotation:hover .anno-label {
-  color: var(--ink);
-}
-
-.annotation:hover .anno-dot {
-  transform: scale(1.35);
-}
-
-/* Staggered reveal: line draws, then the note appears */
-.annotation .anno-dot,
-.annotation .anno-label {
-  animation: fadeIn 0.5s var(--ease) backwards;
-}
-
-.annotation .anno-line {
-  animation: drawLine 0.55s var(--ease) backwards;
-}
-
-.annotation:nth-child(2) .anno-dot,
-.annotation:nth-child(2) .anno-line,
-.annotation:nth-child(2) .anno-label {
-  animation-delay: 0.55s;
-}
-
-.annotation:nth-child(3) .anno-dot,
-.annotation:nth-child(3) .anno-line,
-.annotation:nth-child(3) .anno-label {
-  animation-delay: 0.75s;
-}
-
-.annotation:nth-child(4) .anno-dot,
-.annotation:nth-child(4) .anno-line,
-.annotation:nth-child(4) .anno-label {
-  animation-delay: 0.95s;
-}
-
-@keyframes drawLine {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
-/* ---- Below the baseline: the reading matter ---- */
-
-.hero-below {
-  border-top: 1px solid var(--hairline);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  padding-top: 32px;
-  animation: riseIn 0.8s var(--ease) 0.6s backwards;
-}
-
-.hero-reading {
-  max-width: 560px;
+.hero-content {
+  animation: riseIn 0.9s var(--ease) 0.25s backwards;
 }
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  font-size: clamp(2.5rem, 4.2vw, 3.7rem);
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.14;
+  margin-bottom: 26px;
   color: var(--ink);
-  margin-bottom: 14px;
   text-wrap: balance;
 }
 
@@ -187,47 +90,24 @@
 }
 
 .hero-description {
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 1.1rem;
+  line-height: 1.8;
   color: var(--ink-soft);
-  margin-bottom: 18px;
-  max-width: 56ch;
-}
-
-.hero-stats {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--ink-faint);
-}
-
-.hero-stat strong {
-  font-weight: 500;
-  color: var(--green);
-  margin-right: 2px;
-}
-
-.hero-stat-sep {
-  color: var(--hairline);
+  margin-bottom: 36px;
+  max-width: 46ch;
 }
 
 .hero-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  flex-shrink: 0;
-  padding-top: 6px;
+  gap: 16px;
 }
 
 .btn {
-  padding: 13px 28px;
+  padding: 14px 30px;
   border: 1px solid transparent;
   border-radius: 2px;
   font-family: var(--font-sans);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   cursor: pointer;
@@ -257,20 +137,126 @@
   color: var(--green);
 }
 
-/* ---- Footline: figure caption and page number ---- */
+.hero-stats {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+
+.hero-stat strong {
+  font-weight: 500;
+  color: var(--green);
+  margin-right: 2px;
+}
+
+.hero-stat-sep {
+  color: var(--hairline);
+}
+
+/* ---- The Breaking Plate ---- */
+
+.hero-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The figure box: portrait height plus floor space below her feet */
+.hero-figure {
+  position: relative;
+  width: var(--fig-w);
+  height: calc(var(--fig-h) * 1.06);
+}
+
+/* The photograph she stands in: warm seamless backdrop, a soft light
+   behind her upper body, a faint grid, and a quiet vignette. Only her
+   lower body is inside it — the frame starts at chest height. */
+.hero-plate {
+  position: absolute;
+  top: calc(var(--fig-h) * 0.26);
+  bottom: 0;
+  left: calc(50% - var(--fig-h) * 0.32);
+  width: calc(var(--fig-h) * 0.64);
+  border: 1px solid rgba(31, 29, 26, 0.12);
+  border-radius: 3px;
+  background-color: #cfc9b8;
+  background-image:
+    radial-gradient(
+      58% 42% at 50% 8%,
+      rgba(250, 248, 244, 0.85),
+      rgba(250, 248, 244, 0) 72%
+    ),
+    linear-gradient(rgba(31, 29, 26, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 29, 26, 0.045) 1px, transparent 1px),
+    radial-gradient(
+      140% 110% at 50% 0%,
+      rgba(31, 29, 26, 0) 55%,
+      rgba(31, 29, 26, 0.1) 100%
+    ),
+    linear-gradient(180deg, #ddd8c9 0%, #c9c3b1 100%);
+  background-size:
+    100% 100%,
+    40px 40px,
+    40px 40px,
+    100% 100%,
+    100% 100%;
+  box-shadow: 0 12px 32px rgba(31, 29, 26, 0.07);
+  z-index: 1;
+  animation: fadeIn 0.7s var(--ease) backwards;
+}
+
+.hero-portrait {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: var(--fig-h);
+  width: auto;
+  z-index: 2;
+  /* her shadow cast onto the backdrop — soft, low, believable */
+  filter: drop-shadow(-8px 16px 22px rgba(31, 29, 26, 0.16));
+  transition:
+    transform var(--dur) var(--ease),
+    filter var(--dur) var(--ease);
+  animation: riseIn 0.9s var(--ease) 0.15s backwards;
+}
+
+.hero-figure:hover .hero-portrait {
+  transform: translateX(-50%) translateY(-2px);
+  filter: drop-shadow(-8px 19px 26px rgba(31, 29, 26, 0.19));
+}
+
+/* Caption: the photograph is evidence, and evidence gets a citation */
+.hero-figcaption {
+  width: calc(var(--fig-h) * 0.64);
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid var(--hairline-soft);
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  color: var(--ink-faint);
+  animation: fadeIn 0.7s var(--ease) 0.6s backwards;
+}
+
+/* ---- Footline ---- */
 
 .hero-footline {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  justify-content: flex-end;
+  padding-top: 8px;
+  padding-bottom: 18px;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   color: var(--ink-faint);
-  animation: fadeIn 0.8s var(--ease) 1.1s backwards;
+  animation: fadeIn 0.8s var(--ease) 0.9s backwards;
 }
 
 /* ---- Animations ---- */
@@ -278,11 +264,11 @@
 @keyframes riseIn {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateX(-50%) translateY(14px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 }
 
@@ -295,68 +281,74 @@
   }
 }
 
+.hero-content {
+  animation-name: riseInBlock;
+}
+
+@keyframes riseInBlock {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ---- Responsive ---- */
 
 @media (max-width: 1024px) {
   .hero {
-    --fig-h: min(50vh, 480px);
+    --fig-h: min(52vh, 480px);
   }
 
-  .anno-label {
-    width: 180px;
+  .hero-container {
+    grid-template-columns: 1fr;
+    row-gap: 44px;
+    text-align: center;
+    padding-top: 32px;
+  }
+
+  .hero-stage {
+    order: -1;
+  }
+
+  .hero-figcaption {
+    text-align: left;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .hero-stats {
+    justify-content: center;
   }
 }
 
-/* Narrow screens: the margin disappears, so the notes become footnotes —
-   exactly what print does. */
 @media (max-width: 768px) {
   .hero {
     --hero-pad: 20px;
-    --fig-h: min(44vh, 400px);
+    --fig-h: min(46vh, 420px);
   }
 
-  .hero-plate {
-    height: auto;
-    margin-top: 32px;
+  .hero-title {
+    font-size: 2.2rem;
   }
 
-  .hero-portrait {
-    margin: 0 auto;
-  }
-
-  .annotation {
-    position: static;
-    margin-top: 14px;
-  }
-
-  .annotation:first-of-type {
-    margin-top: 24px;
-  }
-
-  .anno-line {
-    flex: 0 0 22px;
-  }
-
-  .anno-label {
-    width: auto;
-    flex: 1;
-  }
-
-  .hero-below {
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 24px;
+  .hero-description {
+    font-size: 1rem;
   }
 
   .hero-buttons {
-    width: 100%;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .btn {
     width: 100%;
-  }
-
-  .hero-footline {
-    padding-top: 28px;
   }
 }
