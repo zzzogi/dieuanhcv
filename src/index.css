@@ -5,30 +5,66 @@
 }
 
 :root {
-  --primary-green: #089273;
-  --primary-blue: #148efe;
-  --light-bg: #f9f9f9;
-  --white: #ffffff;
-  --dark: #1a1a1a;
-  --gray: #666666;
+  /* ---- Palette: paper, ink, one scholarly green ---- */
+  --paper: #faf8f4;
+  --surface: #fffefb;
+  --ink: #1f1d1a;
+  --ink-soft: #57534c;
+  --ink-faint: #8a857c;
+  --hairline: rgba(31, 29, 26, 0.16);
+  --hairline-soft: rgba(31, 29, 26, 0.08);
+  --green: #0b6e5c;
+  --green-deep: #085546;
+  --green-tint: rgba(11, 110, 92, 0.08);
+  --selection: #d9eae3;
+
+  /* ---- Type ---- */
+  --font-serif: "Lora", "Times New Roman", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", sans-serif;
+  --font-mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+
+  /* ---- Rhythm ---- */
+  --container: 1140px;
+  --gutter: 40px;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --dur-fast: 160ms;
+  --dur: 220ms;
+
+  /* ---- Legacy aliases (older rules resolve into the new palette;
+     blue is retired: it now points at green) ---- */
+  --primary-green: var(--green);
+  --primary-blue: var(--green);
+  --light-bg: var(--paper);
+  --white: var(--surface);
+  --dark: var(--ink);
+  --gray: var(--ink-soft);
 }
 
 body {
   margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--dark);
-  background-color: var(--light-bg);
+  color: var(--ink);
+  background-color: var(--paper);
+}
+
+::selection {
+  background-color: var(--selection);
+  color: var(--ink);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: var(--font-mono);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
