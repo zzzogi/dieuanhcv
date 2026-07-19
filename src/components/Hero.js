@@ -1,5 +1,4 @@
 import "./Hero.css";
-import OptimizedImage from "./OptimizedImage";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
@@ -94,11 +93,14 @@ const Hero = () => {
               </g>
             </svg>
 
-            <OptimizedImage
+            {/* Above the fold: load eagerly, it is the LCP element */}
+            <img
               src="/dieuanhcv/assets/images/hero/profile-2.png"
               alt="Bùi Diệu Anh"
               className="profile-image"
-              loading="lazy"
+              width="450"
+              height="450"
+              fetchPriority="high"
             />
           </div>
         </div>

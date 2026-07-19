@@ -352,12 +352,16 @@ const Achievements = () => {
         <div className="cert-lightbox" onClick={closeLightbox}>
           <div
             className="lightbox-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label={selectedSet.title}
             onClick={(e) => e.stopPropagation()}
           >
             <button
               className="lightbox-close"
               onClick={closeLightbox}
               aria-label="Close"
+              autoFocus
             >
               &times;
             </button>

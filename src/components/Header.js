@@ -134,20 +134,6 @@ const Header = () => {
           </button>
 
           <button
-            className="lang-toggle lang-toggle--mobile"
-            onClick={toggleLanguage}
-            aria-label="Toggle language"
-          >
-            <span className="lang-toggle-track">
-              <span className="lang-label lang-label--left">VI</span>
-              <span className="lang-label lang-label--right">EN</span>
-              <span
-                className={`lang-thumb ${i18n.language === "en" ? "lang-thumb--right" : ""}`}
-              />
-            </span>
-          </button>
-
-          <button
             className={`hamburger ${menuOpen ? "active" : ""}`}
             onClick={toggleMenu}
             aria-label="Toggle menu"

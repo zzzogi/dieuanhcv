@@ -363,10 +363,6 @@
   align-items: center;
 }
 
-.lang-toggle--mobile {
-  display: none;
-}
-
 .lang-toggle-track {
   position: relative;
   display: flex;
@@ -429,14 +425,3 @@
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  .lang-toggle--mobile {
-    display: flex;
-  }
-
-  /* Hide the desktop toggle on mobile (it's inside the desktop nav which is already hidden,
-     but if you placed it outside the nav tag, hide it explicitly) */
-  .lang-toggle:not(.lang-toggle--mobile) {
-    display: none;
-  }
-}

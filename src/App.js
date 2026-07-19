@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import i18n from "./i18n";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -11,6 +12,16 @@ import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 
 function App() {
+  useEffect(() => {
+    // Keep <html lang> in sync with the chosen language
+    document.documentElement.lang = i18n.language;
+    const onLanguageChanged = (lng) => {
+      document.documentElement.lang = lng;
+    };
+    i18n.on("languageChanged", onLanguageChanged);
+    return () => i18n.off("languageChanged", onLanguageChanged);
+  }, []);
+
   useEffect(() => {
     // A citation for the curious
     console.log(

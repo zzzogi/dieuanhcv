@@ -161,11 +161,19 @@ const Projects = () => {
         <div className="mobile-pdf-modal" onClick={closeMobileViewer}>
           <div
             className="mobile-pdf-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label={selectedPaper.title}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mobile-pdf-header">
               <h3>{selectedPaper.title}</h3>
-              <button className="mobile-close-btn" onClick={closeMobileViewer}>
+              <button
+                className="mobile-close-btn"
+                onClick={closeMobileViewer}
+                aria-label="Close"
+                autoFocus
+              >
                 &times;
               </button>
             </div>
