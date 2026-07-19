@@ -17,7 +17,6 @@
   border-bottom: 1px solid var(--hairline);
 }
 
-.hero-masthead,
 .hero-container,
 .hero-footline {
   width: 100%;
@@ -26,36 +25,6 @@
   margin-right: auto;
   padding-left: var(--hero-pad);
   padding-right: var(--hero-pad);
-}
-
-/* ---- Masthead ---- */
-
-.hero-masthead {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding-top: 22px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--hairline);
-  animation: fadeIn 0.6s var(--ease) backwards;
-}
-
-.masthead-title {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-
-.masthead-meta {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  color: var(--ink-faint);
 }
 
 /* ---- Two-column spread ---- */
@@ -182,30 +151,32 @@
   bottom: 0;
   left: calc(50% - var(--fig-h) * 0.32);
   width: calc(var(--fig-h) * 0.64);
-  border: 1px solid rgba(31, 29, 26, 0.12);
+  border: 1px solid rgba(8, 53, 43, 0.35);
   border-radius: 3px;
-  background-color: #cfc9b8;
+  /* Deep-green studio seamless: soft light behind her upper body,
+     faint drafting grid, vignette settling into the lower corners */
+  background-color: var(--green-deep);
   background-image:
     radial-gradient(
       58% 42% at 50% 8%,
-      rgba(250, 248, 244, 0.85),
+      rgba(250, 248, 244, 0.18),
       rgba(250, 248, 244, 0) 72%
     ),
-    linear-gradient(rgba(31, 29, 26, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(31, 29, 26, 0.045) 1px, transparent 1px),
+    linear-gradient(rgba(250, 248, 244, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 248, 244, 0.05) 1px, transparent 1px),
     radial-gradient(
       140% 110% at 50% 0%,
-      rgba(31, 29, 26, 0) 55%,
-      rgba(31, 29, 26, 0.1) 100%
+      rgba(4, 30, 24, 0) 55%,
+      rgba(4, 30, 24, 0.35) 100%
     ),
-    linear-gradient(180deg, #ddd8c9 0%, #c9c3b1 100%);
+    linear-gradient(180deg, #0d7460 0%, #07493c 100%);
   background-size:
     100% 100%,
     40px 40px,
     40px 40px,
     100% 100%,
     100% 100%;
-  box-shadow: 0 12px 32px rgba(31, 29, 26, 0.07);
+  box-shadow: 0 14px 36px rgba(8, 53, 43, 0.16);
   z-index: 1;
   animation: fadeIn 0.7s var(--ease) backwards;
 }
@@ -219,7 +190,7 @@
   width: auto;
   z-index: 2;
   /* her shadow cast onto the backdrop — soft, low, believable */
-  filter: drop-shadow(-8px 16px 22px rgba(31, 29, 26, 0.16));
+  filter: drop-shadow(-8px 16px 22px rgba(4, 30, 24, 0.28));
   transition:
     transform var(--dur) var(--ease),
     filter var(--dur) var(--ease);
@@ -228,7 +199,7 @@
 
 .hero-figure:hover .hero-portrait {
   transform: translateX(-50%) translateY(-2px);
-  filter: drop-shadow(-8px 19px 26px rgba(31, 29, 26, 0.19));
+  filter: drop-shadow(-8px 19px 26px rgba(4, 30, 24, 0.32));
 }
 
 /* Caption: the photograph is evidence, and evidence gets a citation */

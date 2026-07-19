@@ -12,11 +12,6 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero">
-      <div className="hero-masthead">
-        <span className="masthead-title">Tập san Diệu Anh</span>
-        <span className="masthead-meta">Vol. 1 · Hà Nội · 2026</span>
-      </div>
-
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
