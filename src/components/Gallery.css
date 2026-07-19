@@ -9,62 +9,99 @@
   padding: 0 var(--gutter);
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.gallery-item {
-  position: relative;
+/* Film-strip marquee: two rows drifting in opposite directions at
+   reading pace. Full-bleed, pauses on hover, click opens the lightbox. */
+.gallery-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   overflow: hidden;
-  border-radius: 15px;
+  padding: 4px 0;
+}
+
+.marquee-row {
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-drift 48s linear infinite;
+}
+
+.marquee-row--reverse .marquee-track {
+  animation-duration: 56s;
+  animation-direction: reverse;
+}
+
+.gallery-marquee:hover .marquee-track,
+.marquee-track:focus-within {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-drift {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-item {
+  position: relative;
+  flex-shrink: 0;
+  height: 240px;
+  margin-right: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  overflow: hidden;
   cursor: pointer;
-  aspect-ratio: 3/2;
-  background-color: var(--white);
-  transition: transform 0.3s ease;
+  background-color: var(--surface);
+  display: block;
 }
 
-.gallery-item:hover {
-  transform: translateY(-5px);
-}
-
-.gallery-image {
-  width: 100%;
+.marquee-item img {
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  width: auto;
+  display: block;
+  filter: saturate(0.92);
+  transition: filter var(--dur) var(--ease);
 }
 
-.gallery-item:hover .gallery-image {
-  transform: scale(1.1);
+.marquee-item:hover img,
+.marquee-item:focus-visible img {
+  filter: saturate(1);
 }
 
-.gallery-overlay {
+.marquee-caption {
   position: absolute;
-  bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-  color: var(--white);
-  padding: 30px 20px 20px;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
+  bottom: 0;
+  padding: 24px 14px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #fff;
+  background: linear-gradient(to top, rgba(31, 29, 26, 0.75), transparent);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
 }
 
-.gallery-item:hover .gallery-overlay {
-  transform: translateY(0);
+.marquee-item:hover .marquee-caption,
+.marquee-item:focus-visible .marquee-caption {
+  opacity: 1;
 }
 
-.gallery-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
+/* Without motion, the strip becomes a hand-scrollable shelf */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 
-.gallery-description {
-  font-size: 0.9rem;
-  opacity: 0.9;
+  .marquee-row {
+    overflow-x: auto;
+  }
 }
 
 /* Lightbox Styles */
@@ -203,8 +240,8 @@
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .marquee-item {
+    height: 200px;
   }
 
   .lightbox-nav {
@@ -231,9 +268,13 @@
     padding: 0 20px;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .marquee-item {
+    height: 150px;
+    margin-right: 12px;
+  }
+
+  .gallery-marquee {
+    gap: 12px;
   }
 
   .lightbox {

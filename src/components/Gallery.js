@@ -56,6 +56,33 @@ const Gallery = () => {
     return () => window.removeEventListener("keydown", handleKeyPress);
   }, [selectedImage]);
 
+  // Two counter-drifting rows; each track holds the set twice for a
+  // seamless loop. The second copy is hidden from assistive tech.
+  const rowA = galleryImages;
+  const rowB = [...galleryImages.slice(3), ...galleryImages.slice(0, 3)];
+
+  const renderTrack = (images) =>
+    [...images, ...images].map((image, i) => {
+      const isClone = i >= images.length;
+      return (
+        <button
+          key={`${image.id}-${i}`}
+          type="button"
+          className="marquee-item"
+          onClick={() => openLightbox(image)}
+          aria-hidden={isClone || undefined}
+          tabIndex={isClone ? -1 : 0}
+        >
+          <img
+            src={image.src}
+            alt={isClone ? "" : image.title}
+            loading="lazy"
+          />
+          <span className="marquee-caption">{image.title}</span>
+        </button>
+      );
+    });
+
   return (
     <section id="gallery" className="gallery">
       <div className="gallery-container">
@@ -64,26 +91,14 @@ const Gallery = () => {
           title={t("gallery.title")}
           subtitle={t("gallery.subtitle")}
         />
+      </div>
 
-        <div className="gallery-grid">
-          {galleryImages.map((image) => (
-            <div
-              key={image.id}
-              className="gallery-item"
-              onClick={() => openLightbox(image)}
-            >
-              <OptimizedImage
-                src={image.src}
-                alt={image.title}
-                className="gallery-image"
-                loading="lazy"
-              />
-              <div className="gallery-overlay">
-                <h3 className="gallery-title">{image.title}</h3>
-                <p className="gallery-description">{image.description}</p>
-              </div>
-            </div>
-          ))}
+      <div className="gallery-marquee">
+        <div className="marquee-row">
+          <div className="marquee-track">{renderTrack(rowA)}</div>
+        </div>
+        <div className="marquee-row marquee-row--reverse">
+          <div className="marquee-track">{renderTrack(rowB)}</div>
         </div>
       </div>
 
