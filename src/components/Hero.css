@@ -1,31 +1,42 @@
+/* Hero: editorial cover composition. The portrait is the anchor — grounded
+   on the hero's baseline, standing in front of a deep-green panel that
+   bleeds off the right edge of the viewport. */
+
 .hero {
+  --hero-pad: var(--gutter);
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-color: var(--paper);
   padding-top: 80px;
+  border-bottom: 1px solid var(--hairline);
+  overflow-x: hidden;
 }
 
 .hero-container {
+  width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 60px var(--gutter);
+  padding: 40px var(--hero-pad) 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: 1.1fr 0.9fr;
+  column-gap: 48px;
+  align-items: end;
 }
 
+/* ---- Text column, bottom-anchored to share the portrait's baseline ---- */
+
 .hero-content {
-  animation: riseIn 0.9s var(--ease);
+  padding-bottom: 76px;
+  animation: riseIn 0.9s var(--ease) 0.25s backwards;
 }
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: 3.4rem;
+  font-size: clamp(2.6rem, 4.6vw, 4rem);
   font-weight: 500;
-  line-height: 1.15;
-  margin-bottom: 28px;
+  line-height: 1.12;
+  margin-bottom: 26px;
   color: var(--ink);
   text-wrap: balance;
 }
@@ -36,11 +47,11 @@
 }
 
 .hero-description {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   line-height: 1.8;
   color: var(--ink-soft);
-  margin-bottom: 40px;
-  max-width: 500px;
+  margin-bottom: 36px;
+  max-width: 46ch;
 }
 
 .hero-buttons {
@@ -89,7 +100,7 @@
   align-items: baseline;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 40px;
+  margin-top: 36px;
   font-family: var(--font-mono);
   font-size: 0.82rem;
   color: var(--ink-faint);
@@ -105,66 +116,74 @@
   color: var(--hairline);
 }
 
-/* Portrait over a ghosted regression plot */
-.hero-illustration {
-  animation: riseIn 0.9s var(--ease) 0.1s backwards;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* ---- Stage: panel + portrait + caption ---- */
 
-.image-wrapper {
+.hero-stage {
   position: relative;
-  width: 100%;
-  max-width: 450px;
-  aspect-ratio: 1;
+  align-self: stretch;
+  min-height: min(760px, calc(100vh - 140px));
   display: flex;
+  align-items: flex-end;
   justify-content: center;
-  align-items: center;
 }
 
-.hero-plot {
+/* The panel: deep green with a faint blueprint grid, bleeding to the
+   viewport's right edge. Her head breaks its top; her feet meet its base. */
+.hero-panel {
   position: absolute;
-  inset: -4%;
-  width: 108%;
-  height: 108%;
-  z-index: 1;
+  top: 14%;
+  bottom: 0;
+  left: 10%;
+  /* Reach the viewport's right edge: whichever is farther out of the
+     centered container (wide screens) or the gutter (narrow screens) */
+  right: min(
+    calc((100vw - var(--container)) / -2),
+    calc(-1 * var(--hero-pad))
+  );
+  background-color: var(--green-deep);
+  background-image:
+    linear-gradient(rgba(250, 248, 244, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 248, 244, 0.06) 1px, transparent 1px),
+    linear-gradient(175deg, #0d735f, #085546);
+  background-size:
+    44px 44px,
+    44px 44px,
+    100% 100%;
+  z-index: 0;
+  animation: fadeIn 0.8s var(--ease) backwards;
 }
 
-.hero-plot-axes line {
-  stroke: var(--hairline);
-  stroke-width: 1;
-}
-
-.hero-plot-fit {
-  fill: none;
-  stroke: var(--green);
-  stroke-width: 1;
-  stroke-dasharray: 5 7;
-  opacity: 0.45;
-}
-
-.hero-plot-points circle {
-  fill: var(--green);
-  opacity: 0.3;
-}
-
-.profile-image {
+.hero-portrait {
   position: relative;
   z-index: 2;
-  width: 88%;
-  height: 88%;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 30px rgba(31, 29, 26, 0.12));
-  border-radius: 50%;
-  animation: fadeIn 1.2s var(--ease);
+  display: block;
+  height: clamp(440px, 74vh, 700px);
+  width: auto;
+  filter: drop-shadow(-14px 18px 32px rgba(8, 53, 43, 0.3));
+  animation: riseIn 0.9s var(--ease) 0.1s backwards;
+}
+
+/* Caption set like a book spine along the panel's outer edge:
+   the photo is evidence, and evidence gets a citation. */
+.hero-portrait-caption {
+  position: absolute;
+  z-index: 3;
+  right: 14px;
+  bottom: 22px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: rgba(250, 248, 244, 0.65);
+  animation: fadeIn 0.8s var(--ease) 0.5s backwards;
 }
 
 /* Animations */
 @keyframes riseIn {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
@@ -181,52 +200,55 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-content,
-  .hero-illustration,
-  .profile-image {
-    animation: none;
-  }
-}
+/* ---- Responsive ---- */
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
+  .hero {
+    align-items: stretch;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 50px;
-    text-align: center;
+    padding-top: 24px;
   }
 
-  .hero-title {
-    font-size: 2.8rem;
-  }
-
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons,
-  .hero-stats {
-    justify-content: center;
-  }
-
-  .hero-illustration {
+  /* Portrait leads on mobile, still large, still grounded */
+  .hero-stage {
     order: -1;
+    align-self: auto;
+    min-height: 0;
   }
 
-  .image-wrapper {
-    max-width: 400px;
+  .hero-panel {
+    top: 26%;
+    left: calc(-1 * var(--hero-pad));
+    right: calc(-1 * var(--hero-pad));
+  }
+
+  .hero-portrait {
+    height: clamp(360px, 52vh, 520px);
+  }
+
+  .hero-portrait-caption {
+    writing-mode: horizontal-tb;
+    transform: none;
+    right: 16px;
+    bottom: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-content {
+    padding: 40px 0 56px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-container {
-    padding: 40px 20px;
+  .hero {
+    --hero-pad: 20px;
   }
 
   .hero-title {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 
   .hero-description {
@@ -242,7 +264,11 @@
     width: 100%;
   }
 
-  .image-wrapper {
-    max-width: 300px;
+  .hero-portrait {
+    height: clamp(320px, 46vh, 440px);
+  }
+
+  .hero-content {
+    padding: 32px 0 48px;
   }
 }
