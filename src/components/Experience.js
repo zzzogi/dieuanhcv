@@ -1,14 +1,16 @@
 import React from "react";
 import "./Experience.css";
 import SectionHeader from "./SectionHeader";
+import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
 
 const Experience = () => {
   const { t } = useTranslation();
+  const revealRef = useReveal();
   const experienceData = t("experience.items", { returnObjects: true });
 
   return (
-    <section id="experience" className="experience">
+    <section id="experience" className="experience" ref={revealRef}>
       <div className="experience-container">
         <SectionHeader
           number="04"

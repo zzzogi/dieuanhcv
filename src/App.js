@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -11,6 +11,14 @@ import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 
 function App() {
+  useEffect(() => {
+    // A citation for the curious
+    console.log(
+      "%cBùi, D. A. (2026). Tập san Diệu Anh, Vol. 1. Hà Nội: dieuanh.cv.",
+      "font-family: Georgia, serif; font-style: italic; font-size: 12px; color: #0b6e5c;",
+    );
+  }, []);
+
   return (
     <div className="App">
       <div className={`main-content fade-in`}>
@@ -22,6 +30,9 @@ function App() {
         <Experience />
         <Projects />
         <Gallery />
+        <div className="end-ornament" aria-hidden="true">
+          ∗ ∗ ∗
+        </div>
         <Footer />
       </div>
     </div>

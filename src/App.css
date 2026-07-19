@@ -14,3 +14,30 @@
 .main-content.hidden {
   opacity: 0;
 }
+
+/* Scroll reveal: sections rise gently the first time they enter view */
+.will-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s var(--ease),
+    transform 0.7s var(--ease);
+}
+
+.will-reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* End-matter ornament before the colophon */
+.end-ornament {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 1.2em;
+  padding-left: 1.2em; /* recenter: letter-spacing trails the last glyph */
+  color: var(--ink-faint);
+  padding-top: 24px;
+  padding-bottom: 72px;
+  background-color: var(--paper);
+}

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import "./Achievements.css";
 import SectionHeader from "./SectionHeader";
+import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
 
 const Achievements = () => {
   const { t } = useTranslation();
+  const revealRef = useReveal();
   const [selectedSet, setSelectedSet] = useState(null);
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState({});
@@ -279,7 +281,7 @@ const Achievements = () => {
   }, [selectedSet, currentCertIndex, zoomLevel]);
 
   return (
-    <section id="achievements" className="achievements">
+    <section id="achievements" className="achievements" ref={revealRef}>
       <div className="achievements-container">
         <SectionHeader
           number="03"

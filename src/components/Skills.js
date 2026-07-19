@@ -2,10 +2,12 @@ import React from "react";
 import "./Skills.css";
 import SectionHeader from "./SectionHeader";
 import Icon from "./Icon";
+import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
 
 const Skills = () => {
   const { t } = useTranslation();
+  const revealRef = useReveal();
   const skillsData = [
     {
       title: t("skills.research.title"),
@@ -40,7 +42,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="skills">
+    <section id="skills" className="skills" ref={revealRef}>
       <div className="skills-container">
         <SectionHeader
           number="02"

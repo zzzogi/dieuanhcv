@@ -1,12 +1,14 @@
 import "./About.css";
 import OptimizedImage from "./OptimizedImage";
 import SectionHeader from "./SectionHeader";
+import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
   const { t } = useTranslation();
+  const revealRef = useReveal();
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" ref={revealRef}>
       <div className="about-container">
         <figure className="about-image">
           <div className="image-frame">

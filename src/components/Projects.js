@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Projects.css";
 import SectionHeader from "./SectionHeader";
 import papers from "../data/papers";
+import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
 
 // Dieu Anh's name as it appears across bylines; highlighted in citations.
@@ -28,6 +29,7 @@ const formatAuthors = (authors) =>
 
 const Projects = () => {
   const { t } = useTranslation();
+  const revealRef = useReveal();
   const [selectedPaper, setSelectedPaper] = useState(papers[0] ?? null);
   const [showMobileViewer, setShowMobileViewer] = useState(false);
 
@@ -53,7 +55,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="projects">
+    <section id="projects" className="projects" ref={revealRef}>
       <div className="projects-container">
         <SectionHeader
           number="05"

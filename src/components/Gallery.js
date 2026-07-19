@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./Gallery.css";
 import OptimizedImage from "./OptimizedImage";
 import SectionHeader from "./SectionHeader";
+import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
   const { t } = useTranslation();
+  const revealRef = useReveal();
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = t("gallery.items", { returnObjects: true }).map(
@@ -84,7 +86,7 @@ const Gallery = () => {
     });
 
   return (
-    <section id="gallery" className="gallery">
+    <section id="gallery" className="gallery" ref={revealRef}>
       <div className="gallery-container">
         <SectionHeader
           number="06"
