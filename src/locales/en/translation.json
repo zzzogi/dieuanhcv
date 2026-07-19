@@ -14,7 +14,13 @@
     "description": "A scientific researcher passionate about discovery and developing innovative solutions through data and scientific methods.",
     "viewProjects": "View Projects",
     "learnMore": "Learn More",
-    "portraitCaption": "First Prize, Student Scientific Research · 2025"
+    "anno": {
+      "name": "Bui Dieu Anh — BA in International Economics · GPA 3.89/4.0",
+      "trophy": "First Prize trophy — University-level student research, 2025",
+      "certificate": "Certificate of merit in scientific research — NEU"
+    },
+    "figCaption": "Fig. 0 — The researcher.",
+    "pageNumber": "p. 01"
   },
 
   "about": {
