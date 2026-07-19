@@ -336,7 +336,7 @@
     "subtitle": "Các bài báo khoa học đã được công bố trên tạp chí quốc tế",
     "publishedWorks": "Sản phẩm công bố",
     "downloadPdf": "Tải file PDF",
-    "citations": "lượt trích dẫn"
+    "loadingPdf": "Đang tải tài liệu…"
   },
 
   "gallery": {

@@ -336,7 +336,7 @@
     "subtitle": "Scientific papers published in international journals",
     "publishedWorks": "Published Works",
     "downloadPdf": "Download PDF",
-    "citations": "citations"
+    "loadingPdf": "Loading document…"
   },
 
   "gallery": {
