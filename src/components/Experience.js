@@ -18,15 +18,15 @@ const Experience = () => {
 
         <div className="experience-timeline">
           {experienceData.map((exp, index) => (
-            <div key={index} className="timeline-item">
-              <div className="timeline-step">{exp.step}</div>
+            <article key={index} className="timeline-item">
+              <p className="timeline-period">{exp.period}</p>
+              <div className="timeline-node" aria-hidden="true"></div>
               <div className="timeline-content">
                 <h3 className="timeline-position">{exp.position}</h3>
                 <p className="timeline-org">{exp.organization}</p>
-                <p className="timeline-period">{exp.period}</p>
                 <p className="timeline-desc">{exp.description}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
