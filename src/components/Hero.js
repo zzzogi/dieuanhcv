@@ -1,7 +1,9 @@
 import "./Hero.css";
 import OptimizedImage from "./OptimizedImage";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -14,26 +16,23 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Khám phá khoa học,
+            {t("hero.title1")}
             <br />
-            <span className="highlight">Tạo nên giá trị</span>
+            <span className="highlight">{t("hero.title2")}</span>
           </h1>
-          <p className="hero-description">
-            Nhà nghiên cứu khoa học với niềm đam mê khám phá và phát triển các
-            giải pháp sáng tạo dựa trên dữ liệu và phương pháp khoa học.
-          </p>
+          <p className="hero-description">{t("hero.description")}</p>
           <div className="hero-buttons">
             <button
               className="btn btn-primary"
               onClick={() => scrollToSection("projects")}
             >
-              Xem dự án
+              {t("hero.viewProjects")}
             </button>
             <button
               className="btn btn-secondary"
               onClick={() => scrollToSection("about")}
             >
-              Tìm hiểu thêm
+              {t("hero.learnMore")}
             </button>
           </div>
         </div>
@@ -47,7 +46,7 @@ const Hero = () => {
 
             {/* Your PNG image */}
             <OptimizedImage
-              src="/dieuanhcv/assets/images/hero/profile.png"
+              src="/dieuanhcv/assets/images/hero/profile-2.png"
               alt="Dieuanh Profile"
               className="profile-image"
               loading="lazy"

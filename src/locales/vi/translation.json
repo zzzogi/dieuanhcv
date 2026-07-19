@@ -315,9 +315,16 @@
       },
       {
         "step": "05",
+        "position": "Thực tập sinh",
+        "organization": "Công ty CP Hàng hải MACS",
+        "period": "01/2026 - 06/2026",
+        "description": "Quản lý hồ sơ nghiệp vụ, làm việc với khách hàng doanh nghiệp, tổng hợp yêu cầu, xây dựng tài liệu và báo cáo quản trị, phối hợp liên phòng ban nhằm đảm bảo tiến độ và chất lượng triển khai."
+      },
+      {
+        "step": "06",
         "position": "Điều tra viên kinh tế",
         "organization": "Tổng Cục thống kê Thành phố Hà Nội",
-        "period": "2026",
+        "period": "02/2026 - 05/2026",
         "description": "Tham gia thực hiện điều tra, phân tích dữ liệu 100 doanh nghiệp trên địa bàn Cầu Giấy."
       }
     ]
