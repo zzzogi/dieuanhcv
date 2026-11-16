@@ -9,9 +9,9 @@
   },
 
   "hero": {
-    "title1": "Exploring Science,",
-    "title2": "Creating Value",
-    "description": "A scientific researcher passionate about discovery and developing innovative solutions through data and scientific methods.",
+    "title1": "Turning data into",
+    "title2": "clear decisions",
+    "description": "Business & research analyst with an International Economics degree from NEU (GPA 3.89/4.0). I write requirements documents, analyze data and present findings that decision-makers can act on.",
     "viewProjects": "View Projects",
     "learnMore": "Learn More",
     "plateCaption": "Fig. 1 — University-Level \"Outstanding Youth Member\" Title 2024-2025",
@@ -20,13 +20,13 @@
 
   "about": {
     "title": "About Me",
-    "paragraph1": "I am an International Economics graduate (GPA 3.89/4.0) with hands-on research experience in behavioral finance and econometric analysis, combined with practical exposure to international trade operations.",
-    "paragraph2": "Proven ability to lead research teams, interpret quantitative model outputs, and translate findings into clear, actionable insights that bridge analytical rigor with real-world business context.",
-    "paragraph3": "I am seeking a Strategy/Research Analyst or Consulting role where cross-functional thinking and data-driven analysis drive meaningful business impact.",
+    "paragraph1": "I am an International Economics graduate from the National Economics University (GPA 3.89/4.0, Distinction). At Viettel's Quantum Center, I authored the market and customer analysis of a Market Requirements Document, co-authored the PRD and defended the project before 8 group-level functional boards until it was approved.",
+    "paragraph2": "My research is in behavioral finance and econometrics. I led a 3-person student team studying how FOMO, loss aversion and herd behavior drive Vietnamese gold investors (500+ respondents, SEM); the paper was published in a Scopus Q2 journal in 2025. I have co-authored 8 papers in total.",
+    "paragraph3": "I have also processed import-export document sets at MACS, collected enterprise data for the Hanoi Statistics Office and set up course data on an Odoo ERP system. I am looking for business analyst, research analyst and consulting roles where structured analysis drives real decisions.",
     "photoCaption": "Fig. 2 — Bui Dieu Anh, Hanoi.",
 
     "stats": {
-      "experience": "Years Experience",
+      "experience": "Years of Research",
       "projects": "Research Projects",
       "papers": "Published Papers"
     }
@@ -34,36 +34,36 @@
 
   "skills": {
     "title": "Expertise",
-    "subtitle": "Skills and competencies developed throughout my research journey",
+    "subtitle": "Skills built through research projects and work at Viettel, MACS and ODIN",
 
     "research": {
       "title": "Research Methodology",
-      "description": "Research design, qualitative and quantitative analysis, scientific literature review"
+      "description": "Survey design (500+ respondents), quantitative analysis, literature review"
     },
 
     "data": {
       "title": "Data Analysis",
-      "description": "Statistical Analysis, Machine Learning, Data Visualization using Python, R, and SPSS"
+      "description": "SEM (SmartPLS), panel regression (EViews), SPSS; Excel (MOS 950/1000); SQL and Power BI (basic)"
     },
 
     "language": {
       "title": "Languages",
-      "description": "Reading academic literature and writing reports in English"
+      "description": "Vietnamese (native) · English — IELTS 6.5 (2022) · Chinese — HSK 3 (intermediate)"
     },
 
     "writing": {
-      "title": "Academic Writing",
-      "description": "Writing scientific papers, research reports, and academic documents"
+      "title": "Academic & Business Writing",
+      "description": "8 research papers; market and product requirements documents (MRD/PRD), proposals and tender packages"
     },
 
     "management": {
-      "title": "Project Management",
-      "description": "Planning, coordinating research teams, and managing resources"
+      "title": "Business Analysis",
+      "description": "Requirements documents (MRD/PRD), stakeholder interviews, system testing (Odoo ERP), process mapping (BPMN, in progress)"
     },
 
     "communication": {
       "title": "Presentation & Communication",
-      "description": "Scientific presentations, international conferences, workshops, and training"
+      "description": "Defended a project before 8 group-level boards; presented at international conferences (CIEMB 2025, GEIPOVFS); taught 100+ students"
     }
   },
 
@@ -95,7 +95,7 @@
           {
             "id": 3,
             "title": "Certificate of Acceptance for the manuscript (ijfs-3794202): \"The role of Fear of Missing Out (FOMO), Loss Aversion, and Herd Behavior in Gold Investment Decisions: A Study in the Vietnamese Market\"",
-            "organization": "International Journal of IMPACT Financial Studies",
+            "organization": "International Journal of Financial Studies (MDPI)",
             "year": "2025",
             "description": "Paper accepted in a reputable international journal published by MDPI"
           },
@@ -286,56 +286,65 @@
 
   "experience": {
     "title": "Work Experience",
-    "subtitle": "My professional journey in research and beyond",
+    "subtitle": "Hands-on work in analysis, research and operations",
     "items": [
       {
         "step": "01",
-        "position": "Secretary of the Youth Union",
-        "organization": "Le Quy Don High School - Dong Da",
-        "period": "2019 - 2022",
-        "description": "Led and organized Youth Union activities, managed a team of over 20 members."
+        "position": "Project Assistant – Quantum Center",
+        "organization": "Viettel Group",
+        "period": "Jul 2026 – Oct 2026",
+        "bullets": [
+          "Authored the market and customer analysis of a Market Requirements Document (MRD) and co-authored the PRD, proposal and defense deck for a deep-tech R&D project",
+          "Presented the project to 8 group-level functional boards and resolved their questions and requirements; approved at the official defense in Oct 2026",
+          "Traced repeated rework to late technical-document handovers; proposed handover milestones and a procurement checklist, adopted by the center",
+          "Coordinated 5 procurement proposals across engineering, finance and procurement teams (4/5 signed off); co-authored 2 bilingual tender packages",
+          "Tracked 3 parallel R&D projects with daily updates and weekly reports to the Center Director"
+        ]
       },
       {
         "step": "02",
-        "position": "Student",
-        "organization": "National Economics University",
-        "period": "2022 - Present",
-        "description": "Majoring in International Economics, actively participating in scientific research and student clubs."
+        "position": "Intern – Import/Export Operations",
+        "organization": "MACS (Hanoi Branch)",
+        "period": "Jan 2026 – Jun 2026",
+        "bullets": [
+          "Joined meetings with enterprise clients (incl. Rohde & Schwarz Vietnam, Vinacomin) alongside the Deputy Director; turned their needs into written briefs for senior-level negotiations",
+          "Processed and verified full import-export document sets with zero compliance errors"
+        ]
       },
       {
         "step": "03",
-        "position": "Teaching Assistant",
-        "organization": "IELTS Center - ODIN Education",
-        "period": "2022 - 04/2026",
-        "description": "Assisted in teaching and mentoring students in IELTS courses, helping improve language skills and exam strategies."
+        "position": "Field Investigator",
+        "organization": "Hanoi General Statistics Office (GSO)",
+        "period": "Feb 2026 – May 2026",
+        "bullets": [
+          "Collected and validated data from 100 enterprises; reported to office leadership 100% on time with zero data errors"
+        ]
       },
       {
         "step": "04",
-        "position": "Research Student",
-        "organization": "National Economics University",
-        "period": "2022 - Present",
-        "description": "Participated in 10+ research projects, gaining hands-on experience in data analysis and statistical methods."
+        "position": "English Instructor & Teaching Assistant",
+        "organization": "ODIN Language Education Center",
+        "period": "Sep 2022 – Feb 2026",
+        "bullets": [
+          "Designed and delivered English instruction across beginner-to-IELTS levels over 3 years, teaching 100+ students toward their target IELTS score; mentored junior instructors and wrote training guides"
+        ]
       },
       {
         "step": "05",
-        "position": "Intern",
-        "organization": "MACS Shipping Corporation",
-        "period": "01/2026 - 06/2026",
-        "description": "Managed business documentation, worked with corporate clients, consolidated requirements, prepared reports and management documents, and coordinated across departments to ensure delivery timelines and quality."
-      },
-      {
-        "step": "06",
-        "position": "Economic Survey Officer",
-        "organization": "Hanoi General Statistics Office",
-        "period": "02/2026 - 05/2026",
-        "description": "Conducted field surveys and analyzed data from 100 enterprises in Cau Giay district."
+        "position": "ERP Data & Testing Assistant (contract)",
+        "organization": "ODIN Language Education Center",
+        "period": "Oct 2024 – Feb 2025",
+        "bullets": [
+          "Set up 50 lessons and entered course data on the center's Odoo ERP platform",
+          "Tested the lessons and data after setup; fixed errors directly and escalated system-level issues to the IT team"
+        ]
       }
     ]
   },
 
   "projects": {
     "title": "Research Publications",
-    "subtitle": "Scientific papers published in international journals",
+    "subtitle": "8 papers in international and national journals and conference proceedings",
     "publishedWorks": "Published Works",
     "downloadPdf": "Download PDF",
     "loadingPdf": "Loading document…"
@@ -379,7 +388,7 @@
   },
 
   "footer": {
-    "tagline": "Scientific Researcher - Passionate about discovery and innovation",
+    "tagline": "Business & Research Analyst · Hanoi",
     "menu": "Menu",
     "projects": "Projects",
     "contact": "Contact",

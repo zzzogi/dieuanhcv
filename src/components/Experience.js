@@ -26,7 +26,15 @@ const Experience = () => {
               <div className="timeline-content">
                 <h3 className="timeline-position">{exp.position}</h3>
                 <p className="timeline-org">{exp.organization}</p>
-                <p className="timeline-desc">{exp.description}</p>
+                {Array.isArray(exp.bullets) ? (
+                  <ul className="timeline-bullets">
+                    {exp.bullets.map((b, i) => (
+                      <li key={i}>{b}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="timeline-desc">{exp.description}</p>
+                )}
               </div>
             </article>
           ))}

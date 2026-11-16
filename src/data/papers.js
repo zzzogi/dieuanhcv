@@ -10,7 +10,7 @@ const papers = [
     pdfUrl: "/dieuanhcv/assets/pdfs/bai-1.pdf",
     authors: "Xuan Hung Nguyen*, Dieu Anh Bui, Nam Anh Le and Quynh Trang Nguyen",
     journal: "International Journal of Financial Studies",
-    year: "2024",
+    year: "2025",
     description:
       "This study investigates how psychological factors such as FOMO, loss aversion, and herd behavior influence individual investors' decisions to invest in gold in Vietnam.",
   },

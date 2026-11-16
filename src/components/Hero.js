@@ -43,7 +43,7 @@ const Hero = () => {
               ·
             </span>
             <span className="hero-stat">
-              <strong>10+</strong> {t("about.stats.projects")}
+              <strong>5+</strong> {t("about.stats.projects")}
             </span>
             <span className="hero-stat-sep" aria-hidden="true">
               ·

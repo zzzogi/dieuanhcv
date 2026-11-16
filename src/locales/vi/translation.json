@@ -9,9 +9,9 @@
   },
 
   "hero": {
-    "title1": "Khám phá khoa học,",
-    "title2": "Tạo nên giá trị",
-    "description": "Nhà nghiên cứu khoa học với niềm đam mê khám phá và phát triển các giải pháp sáng tạo dựa trên dữ liệu và phương pháp khoa học.",
+    "title1": "Biến dữ liệu",
+    "title2": "thành quyết định rõ ràng",
+    "description": "Business & research analyst, cử nhân Kinh tế Quốc tế NEU (GPA 3.89/4.0). Tôi viết tài liệu yêu cầu, phân tích dữ liệu và trình bày kết quả để người ra quyết định có thể hành động.",
     "viewProjects": "Xem dự án",
     "learnMore": "Tìm hiểu thêm",
     "plateCaption": "Hình 1 — Sinh viên tiêu biểu Đại học KTQD",
@@ -20,13 +20,13 @@
 
   "about": {
     "title": "Về bản thân",
-    "paragraph1": "Tôi là cử nhân Kinh tế Quốc tế (GPA 3.89/4.0) với kinh nghiệm nghiên cứu thực tiễn trong lĩnh vực tài chính hành vi và phân tích kinh tế lượng, kết hợp với kiến thức thực tế về hoạt động thương mại quốc tế.",
-    "paragraph2": "Với khả năng dẫn dắt nhóm nghiên cứu, diễn giải kết quả từ các mô hình định lượng và chuyển hóa phát hiện thành những insight rõ ràng, tôi luôn hướng tới việc tạo ra giá trị phân tích thiết thực.",
-    "paragraph3": "Tôi đang tìm kiếm vị trí Strategy/Research Analyst hoặc Consulting, nơi tư duy phân tích nghiêm túc và khả năng kết nối đa lĩnh vực tạo ra tác động kinh doanh thực sự.",
+    "paragraph1": "Tôi là cử nhân Kinh tế Quốc tế, Đại học Kinh tế Quốc dân (GPA 3.89/4.0, Xuất sắc). Tại Trung tâm Lượng tử của Viettel, tôi viết phần phân tích thị trường và khách hàng trong Tài liệu yêu cầu thị trường (MRD), đồng soạn PRD và bảo vệ đề tài trước 8 ban chức năng cấp Tập đoàn cho đến khi được phê duyệt.",
+    "paragraph2": "Hướng nghiên cứu của tôi là tài chính hành vi và kinh tế lượng. Tôi dẫn dắt nhóm sinh viên 3 người nghiên cứu tác động của FOMO, tâm lý sợ thua lỗ và hành vi bầy đàn đến quyết định đầu tư vàng (hơn 500 người trả lời, mô hình SEM); bài báo được đăng trên tạp chí Scopus Q2 năm 2025. Tôi là đồng tác giả của 8 bài báo.",
+    "paragraph3": "Tôi cũng từng xử lý bộ chứng từ xuất nhập khẩu tại MACS, thu thập dữ liệu doanh nghiệp cho Thống kê Hà Nội và nhập liệu khóa học trên hệ thống Odoo ERP. Tôi đang tìm vị trí Business Analyst, Research Analyst hoặc tư vấn, nơi phân tích có cấu trúc dẫn đến quyết định thật.",
     "photoCaption": "Hình 2 — Bùi Diệu Anh, Hà Nội.",
 
     "stats": {
-      "experience": "Năm kinh nghiệm",
+      "experience": "Năm nghiên cứu",
       "projects": "Dự án nghiên cứu",
       "papers": "Bài báo công bố"
     }
@@ -34,36 +34,36 @@
 
   "skills": {
     "title": "Sở trường",
-    "subtitle": "Những kỹ năng và chuyên môn mà tôi đã phát triển qua quá trình nghiên cứu",
+    "subtitle": "Kỹ năng hình thành qua các dự án nghiên cứu và công việc tại Viettel, MACS, ODIN",
 
     "research": {
       "title": "Phương pháp nghiên cứu",
-      "description": "Thiết kế nghiên cứu, phân tích định tính và định lượng, đánh giá văn bản khoa học"
+      "description": "Thiết kế khảo sát (hơn 500 người trả lời), phân tích định lượng, tổng quan tài liệu"
     },
 
     "data": {
       "title": "Phân tích dữ liệu",
-      "description": "Statistical Analysis, Machine Learning, Data Visualization với Python, R, SPSS"
+      "description": "SEM (SmartPLS), hồi quy dữ liệu bảng (EViews), SPSS; Excel (MOS 950/1000); SQL và Power BI (cơ bản)"
     },
 
     "language": {
       "title": "Ngoại ngữ",
-      "description": "Đọc tài liệu và viết báo cáo bằng tiếng Anh"
+      "description": "Tiếng Việt (bản ngữ) · Tiếng Anh — IELTS 6.5 (2022) · Tiếng Trung — HSK 3 (trung cấp)"
     },
 
     "writing": {
-      "title": "Viết bài khoa học",
-      "description": "Biên soạn bài báo, báo cáo nghiên cứu và tài liệu học thuật"
+      "title": "Viết học thuật & tài liệu nghiệp vụ",
+      "description": "8 bài báo khoa học; tài liệu yêu cầu thị trường và sản phẩm (MRD/PRD), tờ trình, hồ sơ mời thầu"
     },
 
     "management": {
-      "title": "Quản lý dự án",
-      "description": "Lập kế hoạch, điều phối nhóm nghiên cứu, quản lý thời gian và nguồn lực"
+      "title": "Phân tích nghiệp vụ",
+      "description": "Tài liệu yêu cầu (MRD/PRD), phỏng vấn các bên liên quan, kiểm thử hệ thống (Odoo ERP), vẽ quy trình (BPMN, đang học)"
     },
 
     "communication": {
       "title": "Trình bày & Giao tiếp",
-      "description": "Thuyết trình khoa học, hội thảo quốc tế, workshop và đào tạo"
+      "description": "Bảo vệ đề tài trước 8 ban cấp Tập đoàn; trình bày tại hội thảo quốc tế (CIEMB 2025, GEIPOVFS); giảng dạy hơn 100 học viên"
     }
   },
 
@@ -95,7 +95,7 @@
           {
             "id": 3,
             "title": "The certificate of acceptance for the manuscript (ijfs-3794202) titled: \"The role of Fear of Missing Out (FOMO), Loss Aversion, and Herd Behavior in Gold Investment Decisions: A Study in the Vietnamese Market\"",
-            "organization": "International Journal of IMPACT Financial Studies",
+            "organization": "International Journal of Financial Studies (MDPI)",
             "year": "2025",
             "description": "Bài báo được đăng trên tạp chí quốc tế uy tín - Nhà xuất bản MDPI"
           },
@@ -286,56 +286,65 @@
 
   "experience": {
     "title": "Kinh nghiệm làm việc",
-    "subtitle": "Hành trình phát triển nghề nghiệp trong lĩnh vực nghiên cứu khoa học",
+    "subtitle": "Kinh nghiệm thực tế về phân tích, nghiên cứu và vận hành",
     "items": [
       {
         "step": "01",
-        "position": "Bí thư Đoàn trường",
-        "organization": "THPT Lê Quý Đôn - Đống Đa",
-        "period": "2019 - 2022",
-        "description": "Lãnh đạo và tổ chức các hoạt động Đoàn, quản lý đội ngũ hơn 20 thành viên."
+        "position": "Trợ lý dự án – Trung tâm Lượng tử",
+        "organization": "Tập đoàn Viettel",
+        "period": "07/2026 – 10/2026",
+        "bullets": [
+          "Viết phần phân tích thị trường và khách hàng trong Tài liệu yêu cầu thị trường (MRD); đồng soạn PRD, thuyết minh và slide bảo vệ cho một đề tài R&D công nghệ cao",
+          "Trình bày đề tài trước 8 ban chức năng cấp Tập đoàn và giải đáp các câu hỏi, yêu cầu; đề tài được phê duyệt tại buổi bảo vệ chính thức tháng 10/2026",
+          "Tìm ra nguyên nhân phải làm lại nhiều lần là do bàn giao tài liệu kỹ thuật trễ; đề xuất mốc bàn giao và checklist mua sắm, được trung tâm áp dụng",
+          "Điều phối 5 tờ trình mua sắm giữa các bộ phận kỹ thuật, tài chính và mua sắm (4/5 được ký duyệt); đồng soạn 2 hồ sơ mời thầu song ngữ",
+          "Theo dõi 3 đề tài R&D song song, cập nhật hằng ngày và báo cáo hằng tuần cho Giám đốc Trung tâm"
+        ]
       },
       {
         "step": "02",
-        "position": "Sinh viên",
-        "organization": "Đại học Kinh tế Quốc dân",
-        "period": "2022 - Hiện tại",
-        "description": "Sinh viên chuyên ngành Kinh tế quốc tế, tích cực tham gia các hoạt động nghiên cứu khoa học và CLB sinh viên."
+        "position": "Thực tập sinh – Nghiệp vụ xuất nhập khẩu",
+        "organization": "Công ty CP Hàng hải MACS (Chi nhánh Hà Nội)",
+        "period": "01/2026 – 06/2026",
+        "bullets": [
+          "Cùng Phó Giám đốc làm việc với khách hàng doanh nghiệp (trong đó có Rohde & Schwarz Việt Nam, Vinacomin); tổng hợp nhu cầu thành bản tóm tắt cho các buổi đàm phán cấp lãnh đạo",
+          "Xử lý và kiểm tra trọn bộ chứng từ xuất nhập khẩu, không có lỗi tuân thủ"
+        ]
       },
       {
         "step": "03",
-        "position": "Trợ giảng",
-        "organization": "Trung tâm IELTS - ODIN Education",
-        "period": "2022 - 04/2026",
-        "description": "Hỗ trợ giảng dạy và hướng dẫn học viên trong các khóa học IELTS, giúp cải thiện kỹ năng ngôn ngữ và chiến lược làm bài."
+        "position": "Điều tra viên thực địa",
+        "organization": "Thống kê Thành phố Hà Nội",
+        "period": "02/2026 – 05/2026",
+        "bullets": [
+          "Thu thập và kiểm tra dữ liệu của 100 doanh nghiệp; báo cáo lãnh đạo đúng hạn 100%, không có lỗi dữ liệu"
+        ]
       },
       {
         "step": "04",
-        "position": "Nghiên cứu sinh",
-        "organization": "Đại học Kinh tế Quốc dân",
-        "period": "2022 - Hiện tại",
-        "description": "Tham gia 10+ dự án nghiên cứu, học phương pháp phân tích dữ liệu và thống kê."
+        "position": "Giáo viên & Trợ giảng tiếng Anh",
+        "organization": "Trung tâm Giáo dục Ngôn ngữ ODIN",
+        "period": "09/2022 – 02/2026",
+        "bullets": [
+          "Thiết kế và giảng dạy tiếng Anh từ trình độ cơ bản đến IELTS trong 3 năm cho hơn 100 học viên; kèm cặp giáo viên mới và viết tài liệu hướng dẫn giảng dạy"
+        ]
       },
       {
         "step": "05",
-        "position": "Thực tập sinh",
-        "organization": "Công ty CP Hàng hải MACS",
-        "period": "01/2026 - 06/2026",
-        "description": "Quản lý hồ sơ nghiệp vụ, làm việc với khách hàng doanh nghiệp, tổng hợp yêu cầu, xây dựng tài liệu và báo cáo quản trị, phối hợp liên phòng ban nhằm đảm bảo tiến độ và chất lượng triển khai."
-      },
-      {
-        "step": "06",
-        "position": "Điều tra viên kinh tế",
-        "organization": "Tổng Cục thống kê Thành phố Hà Nội",
-        "period": "02/2026 - 05/2026",
-        "description": "Tham gia thực hiện điều tra, phân tích dữ liệu 100 doanh nghiệp trên địa bàn Cầu Giấy."
+        "position": "Trợ lý nhập liệu & kiểm thử ERP (hợp đồng)",
+        "organization": "Trung tâm Giáo dục Ngôn ngữ ODIN",
+        "period": "10/2024 – 02/2025",
+        "bullets": [
+          "Dựng 50 bài học và nhập dữ liệu khóa học trên hệ thống Odoo ERP của trung tâm",
+          "Kiểm thử bài học và dữ liệu sau khi dựng; tự sửa lỗi và báo các lỗi hệ thống cho bộ phận IT"
+        ]
       }
     ]
   },
 
   "projects": {
     "title": "Công trình nghiên cứu",
-    "subtitle": "Các bài báo khoa học đã được công bố trên tạp chí quốc tế",
+    "subtitle": "8 bài báo trên tạp chí quốc tế, tạp chí trong nước và kỷ yếu hội thảo",
     "publishedWorks": "Sản phẩm công bố",
     "downloadPdf": "Tải file PDF",
     "loadingPdf": "Đang tải tài liệu…"
@@ -379,7 +388,7 @@
   },
 
   "footer": {
-    "tagline": "Nhà nghiên cứu khoa học - Đam mê khám phá và sáng tạo",
+    "tagline": "Business & Research Analyst · Hà Nội",
     "menu": "Mục lục",
     "projects": "Dự án",
     "contact": "Liên hệ",
