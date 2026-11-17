@@ -1,6 +1,6 @@
 .experience {
-  padding: 100px 0;
-  background-color: var(--paper);
+  padding: var(--section-pad) 0;
+  background-color: var(--white);
 }
 
 .experience-container {
@@ -9,28 +9,28 @@
   padding: 0 var(--gutter);
 }
 
-/* Curriculum-vitae timeline: dates in the margin, a hairline rule,
-   entries typeset as text on paper rather than cards. */
+/* Timeline: date badges on the left, a dashed thread, entries as cards */
 .experience-timeline {
+  --period-col: 172px;
   position: relative;
-  max-width: 860px;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .experience-timeline::before {
   content: "";
   position: absolute;
-  left: calc(150px + 24px + 10px);
-  top: 8px;
-  bottom: 32px;
-  width: 1px;
-  background-color: var(--hairline);
+  left: calc(var(--period-col) + 24px + 9px);
+  top: 12px;
+  bottom: 40px;
+  border-left: 2px dashed var(--blue-soft);
 }
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 150px 20px 1fr;
+  grid-template-columns: var(--period-col) 20px 1fr;
   column-gap: 24px;
-  padding-bottom: 48px;
+  padding-bottom: 28px;
 }
 
 .timeline-item:last-child {
@@ -38,75 +38,103 @@
 }
 
 .timeline-period {
-  font-family: var(--font-mono);
+  justify-self: end;
+  align-self: start;
+  margin-top: 20px;
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  background-color: var(--sky);
+  color: var(--blue-deep);
   font-size: 0.8rem;
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
-  color: var(--ink-faint);
-  text-align: right;
-  padding-top: 5px;
   white-space: nowrap;
 }
 
 .timeline-node {
-  width: 9px;
-  height: 9px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background-color: var(--paper);
-  border: 1px solid var(--green);
+  background-color: var(--yellow);
+  border: 4px solid var(--white);
+  box-shadow: 0 0 0 2px var(--blue);
   justify-self: center;
-  margin-top: 8px;
+  margin-top: 27px;
   position: relative;
   z-index: 1;
-  transition: background-color var(--dur) var(--ease);
+  transition:
+    background-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
 }
 
 .timeline-item:hover .timeline-node {
-  background-color: var(--green);
+  background-color: var(--blue);
+  transform: scale(1.15);
+}
+
+.timeline-content {
+  min-width: 0;
+  padding: 26px 30px;
+  background-color: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  transition:
+    box-shadow var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    background-color var(--dur) var(--ease);
+}
+
+.timeline-item:hover .timeline-content {
+  background-color: var(--white);
+  border-color: var(--blue-soft);
+  box-shadow: var(--shadow-md);
 }
 
 .timeline-position {
-  font-size: 1.35rem;
-  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--navy);
   margin-bottom: 6px;
 }
 
 .timeline-org {
   font-size: 0.98rem;
-  color: var(--green);
-  font-weight: 500;
-  margin-bottom: 10px;
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .timeline-desc {
   font-size: 0.98rem;
   line-height: 1.75;
-  color: var(--ink-soft);
-  max-width: 60ch;
+  color: var(--text-body);
 }
 
 .timeline-bullets {
   margin: 0.25rem 0 0;
-  padding-left: 1.1rem;
+  padding-left: 1.2rem;
   font-size: 0.98rem;
   line-height: 1.75;
-  color: var(--ink-soft);
-  max-width: 60ch;
+  color: var(--text-body);
 }
+
 .timeline-bullets li {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-bullets li::marker {
+  color: var(--blue);
 }
 
 @media (max-width: 768px) {
-  .experience {
-    padding: 60px 0;
-  }
-
-  .experience-container {
-    padding: 0 20px;
-  }
-
   .experience-timeline::before {
-    left: 10px;
+    left: 9px;
+    top: 8px;
   }
 
   .timeline-item {
@@ -114,27 +142,29 @@
     grid-template-areas:
       "node period"
       "node content";
-    column-gap: 16px;
-    padding-bottom: 36px;
+    column-gap: 14px;
+    padding-bottom: 28px;
   }
 
   .timeline-period {
     grid-area: period;
-    text-align: left;
-    padding-top: 2px;
-    margin-bottom: 6px;
+    justify-self: start;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   .timeline-node {
     grid-area: node;
-    margin-top: 5px;
+    margin-top: 6px;
   }
 
   .timeline-content {
     grid-area: content;
+    padding: 20px 20px;
+    border-radius: var(--r-md);
   }
 
   .timeline-position {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 }

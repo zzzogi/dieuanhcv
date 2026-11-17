@@ -1,6 +1,6 @@
 .gallery {
-  padding: 100px 0;
-  background-color: var(--light-bg);
+  padding: var(--section-pad) 0 56px;
+  background-color: var(--cream);
 }
 
 .gallery-container {
@@ -52,24 +52,27 @@
   margin-right: 20px;
   padding: 0;
   border: none;
-  border-radius: 3px;
+  border-radius: var(--r-md);
   overflow: hidden;
   cursor: pointer;
-  background-color: var(--surface);
+  background-color: var(--sky);
   display: block;
+}
+
+.marquee-item:focus-visible {
+  outline-offset: -3px;
 }
 
 .marquee-item img {
   height: 100%;
   width: auto;
   display: block;
-  filter: saturate(0.92);
-  transition: filter var(--dur) var(--ease);
+  transition: transform 0.5s var(--ease);
 }
 
 .marquee-item:hover img,
 .marquee-item:focus-visible img {
-  filter: saturate(1);
+  transform: scale(1.05);
 }
 
 .marquee-caption {
@@ -77,13 +80,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 24px 14px 10px;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.02em;
+  padding: 30px 16px 12px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
   text-align: left;
   color: #fff;
-  background: linear-gradient(to top, rgba(31, 29, 26, 0.75), transparent);
+  background: linear-gradient(to top, rgba(16, 35, 63, 0.85), transparent);
   opacity: 0;
   transition: opacity var(--dur) var(--ease);
 }
@@ -104,14 +107,16 @@
   }
 }
 
-/* Lightbox Styles */
+/* ---- Lightbox (round control buttons are styled in Achievements.css) ---- */
 .lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: var(--scrim);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,11 +125,13 @@
   padding: 20px;
 }
 
-.lightbox-content {
-  max-width: 1200px;
+.lightbox .lightbox-content {
+  max-width: 1100px;
   width: 100%;
+  max-height: 92vh;
   background-color: var(--white);
-  border-radius: 15px;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
   position: relative;
   animation: scaleIn 0.3s ease;
@@ -134,143 +141,49 @@
 
 .lightbox-image {
   width: 100%;
-  max-height: 70vh;
+  max-height: 68vh;
   object-fit: contain;
-  background-color: #f5f5f5;
+  background-color: var(--sky);
 }
 
-.lightbox-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: var(--white);
-  border: none;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 10001;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  color: var(--dark);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+.lightbox img.lightbox-image {
+  display: block;
 }
 
-.lightbox-close:hover {
-  background-color: var(--primary-green);
-  color: var(--white);
-  transform: rotate(90deg);
-}
-
-/* Navigation Arrows */
-.lightbox-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 2.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  color: var(--dark);
-  z-index: 10001;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.lightbox-nav:hover {
-  background-color: var(--primary-blue);
-  color: var(--white);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.lightbox-prev {
-  left: 20px;
-}
-
-.lightbox-next {
-  right: 20px;
-}
-
-.lightbox-info {
-  padding: 30px;
+.lightbox .lightbox-info {
+  flex-shrink: 0;
+  padding: 26px 32px 30px;
   background-color: var(--white);
 }
 
-.lightbox-info h3 {
-  font-size: 1.5rem;
-  color: var(--dark);
-  margin-bottom: 10px;
+.lightbox .lightbox-info h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 8px;
 }
 
-.lightbox-info p {
+.lightbox .lightbox-info p {
   font-size: 1rem;
-  color: var(--gray);
-  line-height: 1.6;
+  color: var(--text-body);
+  line-height: 1.65;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .marquee-item {
     height: 200px;
-  }
-
-  .lightbox-nav {
-    width: 40px;
-    height: 40px;
-    font-size: 2rem;
-  }
-
-  .lightbox-prev {
-    left: 10px;
-  }
-
-  .lightbox-next {
-    right: 10px;
   }
 }
 
 @media (max-width: 768px) {
   .gallery {
-    padding: 60px 0;
-  }
-
-  .gallery-container {
-    padding: 0 20px;
+    padding-bottom: 40px;
   }
 
   .marquee-item {
     height: 150px;
     margin-right: 12px;
+    border-radius: 14px;
   }
 
   .gallery-marquee {
@@ -281,41 +194,20 @@
     padding: 10px;
   }
 
-  .lightbox-content {
+  .lightbox .lightbox-content {
     max-width: 100%;
+    border-radius: var(--r-md);
   }
 
   .lightbox-image {
     max-height: 60vh;
   }
 
-  .lightbox-info {
+  .lightbox .lightbox-info {
     padding: 20px;
   }
 
-  .lightbox-info h3 {
+  .lightbox .lightbox-info h3 {
     font-size: 1.2rem;
-  }
-
-  .lightbox-close {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    top: 10px;
-    right: 10px;
-  }
-
-  .lightbox-nav {
-    width: 35px;
-    height: 35px;
-    font-size: 1.8rem;
-  }
-
-  .lightbox-prev {
-    left: 5px;
-  }
-
-  .lightbox-next {
-    right: 5px;
   }
 }

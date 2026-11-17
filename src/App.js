@@ -26,7 +26,7 @@ function App() {
     // A citation for the curious
     console.log(
       "%cBùi, D. A. (2026). Tập san Diệu Anh, Vol. 1. Hà Nội: dieuanh.cv.",
-      "font-family: Georgia, serif; font-style: italic; font-size: 12px; color: #0b6e5c;",
+      "font-family: sans-serif; font-weight: 700; font-size: 12px; color: #1673e8;",
     );
   }, []);
 

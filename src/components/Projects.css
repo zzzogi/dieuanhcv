@@ -1,9 +1,9 @@
 .projects {
-  padding: 100px 0;
-  background-color: var(--white);
+  padding: var(--section-pad) 0;
+  background-color: var(--sky);
 }
 
-/* The reading desk gets a wider container than the journal text column —
+/* The reading desk gets a wider container than the text column —
    a deliberate exception so the PDF page stays comfortably legible. */
 .projects-container {
   max-width: 1280px;
@@ -14,40 +14,36 @@
 /* PDF Reader Layout */
 .pdf-reader-layout {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 370px 1fr;
   height: 800px;
-  background-color: var(--surface);
-  border: 1px solid var(--hairline-soft);
-  border-radius: 4px;
+  background-color: var(--white);
+  border-radius: var(--r-lg);
   overflow: hidden;
-  box-shadow: 0 16px 40px rgba(31, 29, 26, 0.07);
+  box-shadow: var(--shadow-md);
   max-height: calc(100vh + 300px);
 }
 
-/* Left Sidebar - reference list */
+/* Left Sidebar - publication list */
 .papers-sidebar {
-  background-color: var(--surface);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--hairline-soft);
+  border-right: 1px solid var(--line);
   height: 100%;
   overflow: hidden;
 }
 
 .sidebar-header {
-  padding: 20px 22px;
-  border-bottom: 1px solid var(--hairline);
-  background-color: var(--surface);
+  padding: 22px 24px 16px;
   flex-shrink: 0;
 }
 
 .sidebar-header h3 {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--text-soft);
   margin: 0;
 }
 
@@ -56,8 +52,9 @@
   overflow-y: auto;
   overflow-x: hidden;
   min-height: 0;
+  padding: 0 12px 12px;
   scrollbar-width: thin;
-  scrollbar-color: var(--hairline) transparent;
+  scrollbar-color: var(--blue-soft) transparent;
 }
 
 .papers-list::-webkit-scrollbar {
@@ -69,38 +66,46 @@
 }
 
 .papers-list::-webkit-scrollbar-thumb {
-  background: var(--hairline);
+  background: var(--blue-soft);
   border-radius: 10px;
 }
 
-/* Paper entries, set like a reference list */
 .paper-item {
   display: flex;
-  gap: 10px;
-  padding: 16px 20px 16px 14px;
+  gap: 12px;
+  padding: 14px 14px;
+  margin-bottom: 6px;
   cursor: pointer;
-  border-left: 2px solid transparent;
-  border-bottom: 1px solid var(--hairline-soft);
+  border: 1.5px solid transparent;
+  border-radius: var(--r-md);
   transition:
     background-color var(--dur) var(--ease),
     border-color var(--dur) var(--ease);
 }
 
 .paper-item:hover {
-  background-color: var(--green-tint);
+  background-color: var(--sky);
 }
 
 .paper-item.active {
-  background-color: var(--green-tint);
-  border-left-color: var(--green);
+  background-color: var(--sky);
+  border-color: var(--blue);
 }
 
 .paper-item-index {
   flex-shrink: 0;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--green);
-  padding-top: 3px;
+  align-self: flex-start;
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  background-color: var(--yellow-soft);
+  color: var(--navy);
+  font-size: 0.7rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.paper-item.active .paper-item-index {
+  background-color: var(--yellow);
 }
 
 .paper-item-info {
@@ -110,10 +115,11 @@
 
 .paper-item-title {
   font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--navy);
   margin-bottom: 6px;
-  line-height: 1.35;
+  line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -123,7 +129,7 @@
 .paper-item-authors {
   font-size: 0.78rem;
   line-height: 1.5;
-  color: var(--ink-faint);
+  color: var(--text-soft);
   margin-bottom: 6px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -132,16 +138,15 @@
 }
 
 .author-self {
-  font-weight: 600;
-  color: var(--green);
+  font-weight: 700;
+  color: var(--blue);
 }
 
 .paper-item-journal {
-  font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   line-height: 1.5;
-  color: var(--ink-soft);
+  color: var(--text-body);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -153,10 +158,10 @@
 }
 
 .paper-item-year {
-  font-family: var(--font-mono);
   font-style: normal;
-  font-size: 0.72rem;
-  color: var(--ink-faint);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-soft);
 }
 
 /* PDF Viewer Container */
@@ -170,25 +175,27 @@
 
 .pdf-viewer-header {
   padding: 24px 28px;
-  border-bottom: 1px solid var(--hairline-soft);
+  border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
-  background-color: var(--surface);
+  background-color: var(--white);
   flex-shrink: 0;
 }
 
 .viewer-title-section h3 {
-  font-size: 1.35rem;
-  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--navy);
   margin-bottom: 8px;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 .viewer-authors {
   font-size: 0.9rem;
-  color: var(--ink-soft);
+  color: var(--text-body);
   margin-bottom: 8px;
 }
 
@@ -197,48 +204,64 @@
   align-items: center;
   gap: 8px;
   font-size: 0.85rem;
-  color: var(--ink-soft);
+  color: var(--text-soft);
   flex-wrap: wrap;
 }
 
 .viewer-journal {
-  font-family: var(--font-serif);
   font-style: italic;
-  color: var(--green);
+  font-weight: 600;
+  color: var(--blue);
 }
 
 .viewer-year {
-  font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--ink-faint);
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  background-color: var(--yellow-soft);
+  color: var(--navy);
 }
 
 .viewer-separator {
-  color: var(--hairline);
+  color: var(--line-strong);
+}
+
+.download-btn,
+.mobile-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: var(--r-pill);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(22, 115, 232, 0.26);
+  transition:
+    background-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
 }
 
 .download-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--green);
-  color: var(--surface);
-  border: none;
-  padding: 12px 22px;
-  border-radius: 2px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color var(--dur) var(--ease);
+  padding: 13px 24px;
+  font-size: 0.92rem;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
-.download-btn:hover {
-  background-color: var(--green-deep);
+.download-btn:hover,
+.mobile-download-btn:hover {
+  background-color: var(--blue-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(22, 115, 232, 0.32);
 }
 
-.download-btn svg {
+.download-btn svg,
+.mobile-download-btn svg {
   width: 18px;
   height: 18px;
 }
@@ -247,7 +270,7 @@
 .pdf-viewer {
   position: relative;
   flex: 1;
-  background-color: #35332f;
+  background-color: var(--navy);
   overflow: hidden;
   min-height: 0;
 }
@@ -258,9 +281,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .pdf-viewer iframe {
@@ -277,23 +300,23 @@
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .pdf-reader-layout {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 310px 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pdf-viewer-header {
+    flex-direction: column;
   }
 }
 
 @media (max-width: 768px) {
-  .projects {
-    padding: 60px 0;
-  }
-
-  .projects-container {
-    padding: 0 20px;
-  }
-
-  /* Hide sidebar on mobile, show modal instead */
+  /* The list stands alone on mobile; tapping a paper opens the modal */
   .pdf-reader-layout {
     grid-template-columns: 1fr;
     height: auto;
+    max-height: none;
+    border-radius: var(--r-md);
   }
 
   .papers-sidebar {
@@ -306,9 +329,9 @@
 
   .papers-list {
     max-height: none;
+    padding: 0 8px 8px;
   }
 
-  /* Mobile Modal */
   .mobile-pdf-modal {
     display: flex;
     position: fixed;
@@ -316,7 +339,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: var(--scrim);
     z-index: 10000;
     animation: fadeIn 0.3s ease;
     padding: 0;
@@ -335,28 +358,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 14px 16px 14px 20px;
     background-color: var(--white);
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--line);
   }
 
   .mobile-pdf-header h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.35;
+    color: var(--navy);
     margin: 0;
     flex: 1;
-    padding-right: 15px;
+    padding-right: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .mobile-close-btn {
-    width: 35px;
-    height: 35px;
-    background-color: var(--light-bg);
+    width: 44px;
+    height: 44px;
+    background-color: var(--sky);
     border: none;
     border-radius: 50%;
     font-size: 1.8rem;
-    color: var(--dark);
+    line-height: 1;
+    color: var(--navy);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -366,13 +396,12 @@
   }
 
   .mobile-close-btn:hover {
-    background-color: var(--primary-green);
-    color: var(--white);
+    background-color: var(--yellow);
   }
 
   .mobile-pdf-viewer {
     flex: 1;
-    background-color: #525659;
+    background-color: var(--navy);
     overflow: hidden;
   }
 
@@ -381,30 +410,15 @@
   }
 
   .mobile-pdf-footer {
-    padding: 15px;
+    padding: 14px 16px;
     background-color: var(--white);
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--line);
   }
 
   .mobile-download-btn {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: var(--green);
-    color: var(--surface);
-    border: none;
     padding: 15px;
-    border-radius: 2px;
     font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-  }
-
-  .mobile-download-btn svg {
-    width: 18px;
-    height: 18px;
   }
 
   @keyframes slideUp {

@@ -18,7 +18,7 @@
 /* Scroll reveal: sections rise gently the first time they enter view */
 .will-reveal {
   opacity: 0;
-  transform: translateY(14px);
+  transform: translateY(18px);
   transition:
     opacity 0.7s var(--ease),
     transform 0.7s var(--ease);
@@ -29,15 +29,15 @@
   transform: none;
 }
 
-/* End-matter ornament before the colophon */
+/* Closing ornament before the footer */
 .end-ornament {
   text-align: center;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  letter-spacing: 1.2em;
-  padding-left: 1.2em; /* recenter: letter-spacing trails the last glyph */
-  color: var(--ink-faint);
-  padding-top: 24px;
-  padding-bottom: 72px;
-  background-color: var(--paper);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.9em;
+  padding-left: 0.9em; /* recenter: letter-spacing trails the last glyph */
+  color: var(--yellow);
+  padding-top: 8px;
+  padding-bottom: 64px;
+  background-color: var(--cream);
 }

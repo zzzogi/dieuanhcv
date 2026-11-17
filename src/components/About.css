@@ -1,5 +1,5 @@
 .about {
-  padding: 100px 0;
+  padding: var(--section-pad) 0;
   background-color: var(--white);
 }
 
@@ -8,17 +8,16 @@
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 80px;
   align-items: center;
 }
 
-/* Portrait as a mounted figure */
 .about-image {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 34px;
   margin: 0;
   animation: fadeInLeft 1s var(--ease);
 }
@@ -26,59 +25,70 @@
 .image-frame {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   aspect-ratio: 3/4;
+}
+
+/* A blue dot peeking from the top-left corner */
+.image-frame::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  z-index: 1;
 }
 
 .about-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 3px;
-  box-shadow: 0 16px 40px rgba(31, 29, 26, 0.12);
+  border-radius: var(--r-lg);
   position: relative;
   z-index: 2;
 }
 
-/* Offset hairline frame, like a print mounted off-register */
+/* Yellow block set off-register behind the photo */
 .border-accent {
   position: absolute;
-  top: -12px;
-  left: -12px;
-  right: 12px;
-  bottom: 12px;
-  border: 1px solid var(--hairline);
-  border-radius: 3px;
+  top: 18px;
+  left: 18px;
+  right: -18px;
+  bottom: -18px;
+  background-color: var(--yellow);
+  border-radius: var(--r-lg);
   z-index: 1;
 }
 
 .figure-caption {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.02em;
-  color: var(--ink-faint);
-  align-self: flex-start;
-  padding-top: 12px;
-  border-top: 1px solid var(--hairline-soft);
+  font-family: var(--font-script);
+  font-size: 1.15rem;
+  color: var(--text-soft);
+  text-align: center;
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
-/* Content Section */
 .about-content {
   animation: fadeInUp 1s ease-out;
 }
 
 .about-text {
-  font-size: 1.08rem;
+  font-size: 1.06rem;
   line-height: 1.85;
-  color: var(--ink-soft);
-  margin-bottom: 20px;
-  max-width: 68ch;
+  color: var(--text-body);
+  margin-bottom: 18px;
+  max-width: 66ch;
 }
 
-/* Animations */
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -101,40 +111,43 @@
   }
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .about-container {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 48px;
   }
 
   .image-frame {
-    max-width: 350px;
+    max-width: 340px;
     margin: 0 auto;
+  }
+
+  .about-text {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media (max-width: 768px) {
-  .about {
-    padding: 60px 0;
-  }
-
-  .about-container {
-    padding: 0 20px;
-  }
-
   .about-text {
     font-size: 1rem;
   }
 
   .image-frame {
-    max-width: 300px;
+    max-width: 270px;
+  }
+
+  .image-frame::before {
+    top: -16px;
+    left: -16px;
+    width: 56px;
+    height: 56px;
   }
 
   .border-accent {
-    top: -10px;
-    left: -10px;
-    right: 10px;
-    bottom: 10px;
+    top: 14px;
+    left: 14px;
+    right: -14px;
+    bottom: -14px;
   }
 }
