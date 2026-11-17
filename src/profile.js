@@ -7,7 +7,7 @@ import profiles from "./data/profiles.json";
    data entry there — no component changes. */
 
 const DEFAULT_CONFIG = {
-  defaultLanguage: "vi",
+  defaultLanguage: "en",
   experienceOrder: null,
   hideGallery: false,
   hiddenAchievementSets: [],
