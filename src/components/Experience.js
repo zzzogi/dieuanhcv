@@ -3,11 +3,14 @@ import "./Experience.css";
 import SectionHeader from "./SectionHeader";
 import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
+import { orderExperience } from "../profile";
 
 const Experience = () => {
   const { t } = useTranslation();
   const revealRef = useReveal();
-  const experienceData = t("experience.items", { returnObjects: true });
+  const experienceData = orderExperience(
+    t("experience.items", { returnObjects: true }),
+  );
 
   return (
     <section id="experience" className="experience" ref={revealRef}>

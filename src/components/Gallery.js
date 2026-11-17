@@ -4,6 +4,7 @@ import OptimizedImage from "./OptimizedImage";
 import SectionHeader from "./SectionHeader";
 import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
+import { showGallery } from "../profile";
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -84,6 +85,8 @@ const Gallery = () => {
         </button>
       );
     });
+
+  if (!showGallery) return null;
 
   return (
     <section id="gallery" className="gallery" ref={revealRef}>

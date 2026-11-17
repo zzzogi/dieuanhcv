@@ -289,6 +289,7 @@
     "subtitle": "Kinh nghiệm thực tế về phân tích, nghiên cứu và vận hành",
     "items": [
       {
+        "id": "viettel",
         "step": "01",
         "position": "Trợ lý dự án – Trung tâm Lượng tử",
         "organization": "Tập đoàn Viettel",
@@ -302,6 +303,7 @@
         ]
       },
       {
+        "id": "macs",
         "step": "02",
         "position": "Thực tập sinh – Nghiệp vụ xuất nhập khẩu",
         "organization": "Công ty CP Hàng hải MACS (Chi nhánh Hà Nội)",
@@ -312,6 +314,7 @@
         ]
       },
       {
+        "id": "gso",
         "step": "03",
         "position": "Điều tra viên thực địa",
         "organization": "Thống kê Thành phố Hà Nội",
@@ -321,6 +324,7 @@
         ]
       },
       {
+        "id": "odin",
         "step": "04",
         "position": "Giáo viên & Trợ giảng tiếng Anh",
         "organization": "Trung tâm Giáo dục Ngôn ngữ ODIN",
@@ -330,6 +334,7 @@
         ]
       },
       {
+        "id": "odoo",
         "step": "05",
         "position": "Trợ lý nhập liệu & kiểm thử ERP (hợp đồng)",
         "organization": "Trung tâm Giáo dục Ngôn ngữ ODIN",
@@ -394,5 +399,31 @@
     "contact": "Liên hệ",
     "allProjects": "Tất cả dự án",
     "rights": "Tất cả quyền được bảo lưu"
+  },
+  "profiles": {
+    "ba": {
+      "hero": {
+        "description": "Business analyst có kinh nghiệm thực tế với tài liệu yêu cầu: tại Viettel, tôi viết phần thị trường và khách hàng của MRD, đồng soạn PRD và bảo vệ đề tài trước 8 ban cấp Tập đoàn. Tôi cũng từng kiểm thử và sửa dữ liệu trên hệ thống Odoo ERP đang vận hành."
+      },
+      "about": {
+        "paragraph3": "Tôi cũng từng dựng và kiểm thử dữ liệu khóa học trên hệ thống Odoo ERP, xử lý bộ chứng từ xuất nhập khẩu tại MACS và thu thập dữ liệu doanh nghiệp cho Thống kê Hà Nội. Tôi đang tìm vị trí Business Analyst, nơi tôi có thể biến nhu cầu của các bên liên quan thành yêu cầu rõ ràng."
+      }
+    },
+    "erp": {
+      "hero": {
+        "description": "Business analyst tập trung vào cải tiến quy trình, có kinh nghiệm thực tế với ERP: tại Viettel, tôi tìm ra nguyên nhân phải làm lại nhiều lần là do bàn giao tài liệu trễ, và đề xuất mốc bàn giao cùng checklist mua sắm được trung tâm áp dụng."
+      },
+      "about": {
+        "paragraph3": "Trên hệ thống Odoo ERP của ODIN, tôi dựng 50 bài học và dữ liệu khóa học, kiểm thử và cùng bộ phận IT sửa lỗi. Tôi đang tìm vị trí về ERP và quy trình, nơi tôi có thể vẽ lại cách công việc thực sự vận hành và giúp nó chạy tốt hơn."
+      }
+    },
+    "consulting": {
+      "hero": {
+        "description": "Cử nhân Kinh tế Quốc tế (GPA 3.89/4.0), giải quyết vấn đề có cấu trúc dựa trên dữ liệu: tôi bảo vệ một đề tài R&D công nghệ cao trước 8 ban cấp Tập đoàn tại Viettel và dẫn dắt nhóm sinh viên thực hiện bài báo Scopus Q2."
+      },
+      "about": {
+        "paragraph3": "Tôi đã làm việc trong những môi trường rất khác nhau, từ cơ quan thống kê, doanh nghiệp xuất nhập khẩu đến trung tâm R&D của tập đoàn, và nắm bắt nhanh từng lĩnh vực. Tôi đang tìm vị trí tư vấn, nơi phân tích có cấu trúc định hình quyết định của khách hàng."
+      }
+    }
   }
 }

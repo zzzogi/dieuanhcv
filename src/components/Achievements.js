@@ -3,6 +3,7 @@ import "./Achievements.css";
 import SectionHeader from "./SectionHeader";
 import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
+import { isAchievementSetVisible } from "../profile";
 
 const Achievements = () => {
   const { t } = useTranslation();
@@ -151,8 +152,9 @@ const Achievements = () => {
     },
   ];
 
-  const certificateSets = t("achievements.sets", { returnObjects: true }).map(
-    (set) => {
+  const certificateSets = t("achievements.sets", { returnObjects: true })
+    .filter((set) => isAchievementSetVisible(set.id))
+    .map((set) => {
       const imageData = certificateImages.find((img) => img.id === set.id);
       return {
         ...set,
@@ -162,8 +164,7 @@ const Achievements = () => {
           image: imageData?.certificates[index]?.image ?? "",
         })),
       };
-    },
-  );
+    });
 
   const openLightbox = (set) => {
     setSelectedSet(set);

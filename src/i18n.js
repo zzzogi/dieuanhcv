@@ -3,6 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 import vi from "./locales/vi/translation.json";
 import en from "./locales/en/translation.json";
+import { profileConfig } from "./profile";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -13,7 +14,7 @@ i18n.use(initReactI18next).init({
       translation: en,
     },
   },
-  lng: "vi",
+  lng: profileConfig.defaultLanguage,
   fallbackLng: "vi",
   interpolation: {
     escapeValue: false,

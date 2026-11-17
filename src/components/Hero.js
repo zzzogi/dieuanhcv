@@ -1,8 +1,10 @@
 import "./Hero.css";
 import { useTranslation } from "react-i18next";
+import { useProfileText } from "../profile";
 
 const Hero = () => {
   const { t } = useTranslation();
+  const pt = useProfileText();
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -19,7 +21,7 @@ const Hero = () => {
             <br />
             <span className="highlight">{t("hero.title2")}</span>
           </h1>
-          <p className="hero-description">{t("hero.description")}</p>
+          <p className="hero-description">{pt("hero.description")}</p>
           <div className="hero-buttons">
             <button
               className="btn btn-primary"

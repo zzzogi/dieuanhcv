@@ -3,9 +3,11 @@ import OptimizedImage from "./OptimizedImage";
 import SectionHeader from "./SectionHeader";
 import useReveal from "../hooks/useReveal";
 import { useTranslation } from "react-i18next";
+import { useProfileText } from "../profile";
 
 const About = () => {
   const { t } = useTranslation();
+  const pt = useProfileText();
   const revealRef = useReveal();
   return (
     <section id="about" className="about" ref={revealRef}>
@@ -29,7 +31,7 @@ const About = () => {
           <SectionHeader number="01" title={t("about.title")} />
           <p className="about-text">{t("about.paragraph1")}</p>
           <p className="about-text">{t("about.paragraph2")}</p>
-          <p className="about-text">{t("about.paragraph3")}</p>
+          <p className="about-text">{pt("about.paragraph3")}</p>
         </div>
       </div>
     </section>

@@ -1,0 +1,29 @@
+{
+  "ba": {
+    "title": "Bùi Diệu Anh — Business Analyst",
+    "description": "Business Analyst · Requirements documents (MRD/PRD) · Stakeholder management · Odoo ERP testing",
+    "defaultLanguage": "en",
+    "experienceOrder": ["viettel", "odoo", "macs", "gso", "odin"],
+    "hideGallery": true,
+    "hiddenAchievementSets": [2],
+    "hiddenSocials": ["facebook", "instagram"]
+  },
+  "erp": {
+    "title": "Bùi Diệu Anh — Business Analyst · ERP & Process",
+    "description": "Business Analyst · Process improvement · Hands-on Odoo ERP data setup and testing",
+    "defaultLanguage": "en",
+    "experienceOrder": ["viettel", "odoo", "macs", "gso", "odin"],
+    "hideGallery": true,
+    "hiddenAchievementSets": [2],
+    "hiddenSocials": ["facebook", "instagram"]
+  },
+  "consulting": {
+    "title": "Bùi Diệu Anh — Business Analyst · Strategy & Research",
+    "description": "International Economics graduate (GPA 3.89/4.0) · Structured analysis · Scopus Q2 research",
+    "defaultLanguage": "en",
+    "experienceOrder": ["viettel", "macs", "gso", "odin", "odoo"],
+    "hideGallery": true,
+    "hiddenAchievementSets": [2],
+    "hiddenSocials": ["facebook", "instagram"]
+  }
+}

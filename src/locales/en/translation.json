@@ -289,6 +289,7 @@
     "subtitle": "Hands-on work in analysis, research and operations",
     "items": [
       {
+        "id": "viettel",
         "step": "01",
         "position": "Project Assistant – Quantum Center",
         "organization": "Viettel Group",
@@ -302,6 +303,7 @@
         ]
       },
       {
+        "id": "macs",
         "step": "02",
         "position": "Intern – Import/Export Operations",
         "organization": "MACS (Hanoi Branch)",
@@ -312,6 +314,7 @@
         ]
       },
       {
+        "id": "gso",
         "step": "03",
         "position": "Field Investigator",
         "organization": "Hanoi General Statistics Office (GSO)",
@@ -321,6 +324,7 @@
         ]
       },
       {
+        "id": "odin",
         "step": "04",
         "position": "English Instructor & Teaching Assistant",
         "organization": "ODIN Language Education Center",
@@ -330,6 +334,7 @@
         ]
       },
       {
+        "id": "odoo",
         "step": "05",
         "position": "ERP Data & Testing Assistant (contract)",
         "organization": "ODIN Language Education Center",
@@ -394,5 +399,31 @@
     "contact": "Contact",
     "allProjects": "All Projects",
     "rights": "All rights reserved"
+  },
+  "profiles": {
+    "ba": {
+      "hero": {
+        "description": "Business analyst with hands-on requirements work: at Viettel I authored the market and customer sections of an MRD, co-wrote the PRD and defended the project before 8 group-level boards. I have also tested and fixed data on a live Odoo ERP system."
+      },
+      "about": {
+        "paragraph3": "I have also set up and tested course data on an Odoo ERP system, processed import-export document sets at MACS and collected enterprise data for the Hanoi Statistics Office. I am looking for a business analyst role where I can turn stakeholder needs into clear requirements."
+      }
+    },
+    "erp": {
+      "hero": {
+        "description": "Business analyst with a process-improvement focus and hands-on ERP exposure: at Viettel I traced repeated rework to late document handovers and proposed handover milestones and a procurement checklist that the center adopted."
+      },
+      "about": {
+        "paragraph3": "On the Odoo ERP system at ODIN, I set up 50 lessons and course data, tested them and fixed errors with the IT team. I am looking for ERP and process roles where I can map how work actually flows and help it run better."
+      }
+    },
+    "consulting": {
+      "hero": {
+        "description": "International Economics graduate (GPA 3.89/4.0) who structures problems with data: I defended a deep-tech R&D project before 8 group-level boards at Viettel and led the student team behind a Scopus Q2 paper."
+      },
+      "about": {
+        "paragraph3": "I have worked in very different settings, from a statistics office and an import-export firm to a corporate R&D center, and learned each business quickly. I am looking for a consulting role where structured analysis shapes client decisions."
+      }
+    }
   }
 }
